@@ -1,0 +1,717 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta name="keywords" content="溧中生物化学基地">
+<meta name="description" content="溧中生物化学基地">
+<head><meta name="viewport" content="width=980">
+<title>溧中生物化学基地</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="./images/lzshjd/home_style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+//屏蔽可忽略的js脚本错误
+function killErr(){
+	return true;
+}
+window.onerror=killErr;
+</SCRIPT>
+
+
+<body>
+<div class="top all">
+  <div class="topbanner">
+    <ul>
+      <li class="top_logo lf"></li>
+      <form name="form1" method="post" action="/do/search.php" onsubmit="return cksearch();">    
+      <li class="top_write lf">
+        <input id="keyword_s" type="text" name="keyword" value="请输入关键字" onfocus="this.value='';" onblur="if(this.value==''){this.value='请输入关键字'}" ();="">
+      </li>
+      <li class="top_submit lf">
+         <input name="Submit" type="submit" value="" />
+      </li>
+      </form>
+      <script type="text/javascript">
+                function cksearch(){
+	if (document.getElementById("keyword_s").value=='')
+	{
+		alert('关键字不能为空!');
+		return false;
+	}
+}
+                </script>
+      <li class="login rt"><a href="../../_missing.html?u=%2Fdo%2Flogin.php&r=admin" target="_blank">登陆</a> &nbsp; &nbsp; <!--<a href="#" target="_blank">注册</a>--></li>
+    </ul>
+    
+  </div>  
+  <div class="clear"></div>
+</div>
+<div class="banner">
+  <ul>
+  <li class="web_name lf">江苏省基于乡土资源化学生物课程基地<br />
+
+南京市化学生物融合工作室</li>
+<li class="nav lf"><a href="index.html">首页</a></li>
+<li class="nav_line lf">|</li>
+<li class="nav lf"><a href="../../_missing.html?u=%2Flist.php%3Ffid%3D41&r=list">基地概况</a></li>
+<li class="nav_line lf">|</li>
+<li class="nav lf"><a href="../../_missing.html?u=%2Flist.php%3Ffid%3D42&r=list">基地浏览</a></li>
+<li class="nav_line lf">|</li>
+<li class="nav lf"><a href="../../_missing.html?u=%2Flist.php%3Ffid%3D43&r=list">工作室概况</a></li>
+<li class="nav_line lf">|</li>
+<li class="nav lf"><a href="../../_missing.html?u=%2Fguestbook%2F%3Ffid%3D1&r=unknown">在线答疑</a></li>
+  </ul>
+  <div class="clear"></div>
+  </div>
+<!--
+-->
+ <div class="main">
+<div class="main_left lf">
+<div class="lf_date">
+<ul>
+<li class="dlist_left lf"><div id="hours"></div><div class="dlist_left_div"><img src="./images/lzshjd/hs_17.jpg" width="32" height="32" /></div> </li>
+<li class="dlist_right lf"><span  id="day"></span> <div id="month">
+</div><div id="week"></div></li>
+<script language="javascript">show_cur_times();</script>
+</ul>
+</div>
+<script type="text/javascript" language="javascript">
+function show_cur_times(){
+//获取当前日期
+ var date_time = new Date();
+ //定义星期
+ var week;
+ //switch判断
+ switch (date_time.getDay()){
+case 1: week="星期一"; break;
+case 2: week="星期二"; break;
+case 3: week="星期三"; break;
+case 4: week="星期四"; break;
+case 5: week="星期五"; break;
+case 6: week="星期六"; break;
+default:week="星期天"; break;
+ }
+ 
+ //年
+
+ //月
+ var month;
+ switch (date_time.getMonth()){
+case 1: month="二"; break;
+case 2: month="三"; break;
+case 3: month="四"; break;
+case 4: month="五"; break;
+case 5: month="六"; break;
+case 6: month="七"; break;
+case 7: month="八"; break;
+case 8: month="九"; break;
+case 9: month="十"; break;
+case 10: month="十一"; break;
+case 11: month="十二"; break;
+default:month="一"; break;
+ }
+ 
+ //日
+ var day = date_time.getDate();
+ 	//判断小于10，前面补0
+   if(day<10){
+ 	day="0"+day;
+ }
+ 
+ //时
+ var hours =date_time.getHours();
+ 	//判断小于10，前面补0
+    if(hours<10){
+ 	hours="0"+hours;
+ }
+ 
+ //分
+ var minutes =date_time.getMinutes();
+ 	//判断小于10，前面补0
+    if(minutes<10){
+ 	minutes="0"+minutes;
+ }
+ 
+ //秒
+
+ //拼接年月日时分秒
+ var date_week =week+" ";
+ var date_mon =month+"月"+" ";
+ var date_day =day+" ";
+ var date_time =hours+":"+minutes+" ";
+ //显示在id为showtimes的容器里
+ document.getElementById("week").innerHTML= date_week;
+ document.getElementById("month").innerHTML= date_mon;
+ document.getElementById("day").innerHTML= date_day;
+ document.getElementById("hours").innerHTML= date_time;
+ 
+}
+ 
+ //设置1秒调用一次show_cur_times函数
+setInterval("show_cur_times()",100);
+</script>
+<div class="pic_link lf"><a href="../../_missing.html?u=%2Flist.php%3Ffid%3D45&r=list"><img src="./images/lzshjd/hs_14.jpg" width="245" height="125" /></a><!--<a href="#"><img src="./images/lzshjd/hs_14.jpg" width="245" height="125" /></a> --></div>
+<div class="pic_link lf"><a href="../../_missing.html?u=%2Flist.php%3Ffid%3D46&r=list"><img src="./images/lzshjd/hs_10.jpg" width="245" height="125" /></a><!--<a href="#"><img src="./images/lzshjd/hs_10.jpg" width="245" height="125" /></a> --></div>
+<div class="pic_link lf"><a href="../../_missing.html?u=%2Flist.php%3Ffid%3D47&r=list"><img src="./images/lzshjd/hs_11.jpg" width="245" height="125" /></a> <!--<a href="#"><img src="./images/lzshjd/hs_11.jpg" width="245" height="125" /></a> --></div>
+<div class="pic_link lf"><a href="../../_missing.html?u=%2Flist.php%3Ffid%3D48&r=list"><img src="./images/lzshjd/hs_13.jpg" width="245" height="125" /></a><!--<a href="#"><img src="./images/lzshjd/hs_13.jpg" width="245" height="125" /></a> --></div>
+<div class="pic_link lf"><a href="http://qun.qq.com/member.html#gid=264763766"><img src="./images/lzshjd/hs_12.jpg" width="245" height="125" /></a><!--<a href="#"><img src="./images/lzshjd/hs_12.jpg" width="245" height="125" /></a> --></div>
+<div class="clear"></div>
+</div>
+<div class="main_mid lf">
+<div class="mid_flash lf"><script type="text/javascript" src="./images/lzshjd/jquery-1.9.1.min.js"></script>
+<script  type="text/javascript" src="./images/lzshjd/slider.js"></script>
+<style type="text/css">
+.flexslider {
+	margin: 0 auto;
+	position: relative;
+	width:749px;  /*控制控件宽*/
+	height:372px; /*控制控件高*/
+	zoom: 1;
+	overflow:hidden;
+}
+.img {
+	width:749px;  /*控制图片宽*/
+	height:372px  /*控制图片高*/ 
+}
+
+.flexslider .slides img {
+	width: 100%;
+	display: block;
+}
+.flex-direction-nav a {
+	width: 60px;
+	height: 90px;
+	margin: -60px 0 0;
+	display: block;
+	background: url(./images/lzshjd/ad_ctr.png) no-repeat 0 0; /*左右按钮用图*/
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	cursor: pointer;
+	text-indent: -9999px;
+	opacity: 0;
+	filter:alpha(opacity=0);
+    -webkit-transition: all .3s ease;
+}
+.flex-direction-nav .flex-next {
+	background-position: 0 -90px;
+	right: 0;
+}
+.flex-direction-nav .flex-prev {
+	left: 0;
+}
+.flexslider:hover .flex-next {
+	opacity: 0.8;
+	filter:alpha(opacity=25);
+}
+.flexslider:hover .flex-prev {
+	opacity: 0.8;
+	filter:alpha(opacity=25);
+}
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
+	opacity: 1;
+	filter:alpha(opacity=50);
+}
+.flex-control-nav {
+	width: 100%;
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+	float:left;
+}
+.flex-control-nav li {
+	margin: 0 5px;
+	display: inline-block;
+	zoom: 1;
+*display: inline;
+}
+.flex-control-paging li a {
+	background: url(./images/lzshjd/dot.png) no-repeat 0 -16px; /*点用图*/
+	display:block;
+	height: 16px;
+	overflow: hidden;
+	text-indent:-99em;
+	width: 16px;
+	cursor: pointer;
+}
+.flex-control-paging li a.flex-active {
+	background-position: 0 0;
+}
+</style>
+<div class="flexslider">
+<ul class="slides">
+<li>
+<div><a href="index.html" target="_blank"><img src="./images/lzshjd/hsb_04.jpg"  border="0" class="img" /></a></div>
+</li>	
+<li>
+<div><a href="index.html" target="_blank"><img src="./images/lzshjd/hsb_02.jpg"  border="0" class="img" /></a></div>
+</li>
+<li>
+<div><a href="index.html" target="_blank"><img src="./images/lzshjd/hsb_03.jpg"  border="0" class="img" /></a></div>
+</li>
+<li>
+<div><a href="index.html" target="_blank"><img src="./images/lzshjd/hsb_01.jpg"  border="0" class="img" /></a></div>
+</li>		
+</ul>
+</div>
+<script type="text/javascript">
+    $(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script><!--<img src="/images/lzshjd/hs_07.jpg" width="749" height="372" />--></div>
+<div class="mid_colname lf">
+<ul>
+<li class="header lf"></li>
+<li class="colname lf">关于我们</li>
+<li class="more1 rt"><a href="../../_missing.html?u=%2Flist.php%3Ffid%3D96&r=list" ><img src="./images/lzshjd/hs_06.jpg" width="37" height="11" /></a> <!--<a href="#" ><img src="./images/lzshjd/hs_06.jpg" width="37" height="11" /></a> --></li>
+</ul>
+</div> 
+<div class="mid_collist lf">
+<div class="list_con lf">
+<ul>
+<li class="con_lf lf"><img src="./upload_files/article//1_20151209161219_pbv3o.jpg" width="123" height="92" /></li>
+<li class="con_rt lf"><span><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D96%26id%3D80&r=article" target="_blank"  title="陈龙文"  class="blue" >陈龙文</a><br />
+<span>陈龙文，江苏省溧水高级中学副校长、化学特级教师，主持化..</span>
+</span>
+</li>
+</ul>
+</div><div class="list_con lf">
+<ul>
+<li class="con_lf lf"><img src="./upload_files/article//1_20151209161200_yvp5a.jpg" width="123" height="92" /></li>
+<li class="con_rt lf"><span><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D96%26id%3D79&r=article" target="_blank"  title="林尤宏"  class="blue" >林尤宏</a><br />
+<span>中共党员,校教科室主任，江苏省特级教师、南京市优秀教育工..</span>
+</span>
+</li>
+</ul>
+</div><div class="list_con lf">
+<ul>
+<li class="con_lf lf"><img src="./upload_files/article/96/1_20151209161203_tbs0m.jpg" width="123" height="92" /></li>
+<li class="con_rt lf"><span><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D96%26id%3D78&r=article" target="_blank"  title="朱雪琴"  class="blue" >朱雪琴</a><br />
+<span>朱雪琴，南京市上元中学化学教师，兼教科室主任。曾被评为..</span>
+</span>
+</li>
+</ul>
+</div><div class="list_con lf">
+<ul>
+<li class="con_lf lf"><img src="./upload_files/article//1_20151209151221_hke6n.jpg" width="123" height="92" /></li>
+<li class="con_rt lf"><span><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D96%26id%3D77&r=article" target="_blank"  title="林家平"  class="blue" >林家平</a><br />
+<span>六合区龙袍初级中学校长，中共党员，中学高级教师，，六合..</span>
+</span>
+</li>
+</ul>
+</div><div class="list_con lf">
+<ul>
+<li class="con_lf lf"><img src="./upload_files/article//1_20151209151234_f70fs.jpg" width="123" height="92" /></li>
+<li class="con_rt lf"><span><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D96%26id%3D76&r=article" target="_blank"  title="王建业"  class="blue" >王建业</a><br />
+<span>南京市溧水区，市学科带头人、市教学先进个人
+</span>
+</span>
+</li>
+</ul>
+</div><div class="list_con lf">
+<ul>
+<li class="con_lf lf"><img src="./upload_files/article//1_20151209151205_rmp9b.png" width="123" height="92" /></li>
+<li class="con_rt lf"><span><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D96%26id%3D75&r=article" target="_blank"  title="陈方"  class="blue" >陈方</a><br />
+<span>南京市溧水区，特级后备教师、市学科带头人、化学教研组长..</span>
+</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="main_right lf">
+<div class="xz_pic lf"><a href="art_f19_i186_p1.html" target="_blank"><img src="./images/lzshjd/hs_22.jpg" width="293" height="146" /></a></div>
+<div class="rt_colname lf">
+<ul>
+<li class="rt_header lf"></li>
+<li class="colname2 lf">资讯</li>
+<li class="more2 rt"><a href="../../_missing.html?u=%2Flist.php%3Ffid%3D56&r=list" ><img src="./images/lzshjd/hs_04.jpg" width="37" height="11" /></a><!--<a href="#" ><img src="./images/lzshjd/hs_04.jpg" width="37" height="11" /></a> --></li>
+</ul>
+</div> 
+<div class="rt_collist lf">
+<ul>
+<li class="top3"><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D56%26id%3D147&r=article" target="_blank"  title="2016年5月26日省化学特级教师陈龙文副校长到江宁区进行工作调研"  class="blue" >2016年5月26日省化学特级教师..</a></li><li class="top3"><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D56%26id%3D146&r=article" target="_blank"  title="2016年5 月19日陈龙文老师一行3人赴高淳进行工作调研"  class="blue" >2016年5 月19日陈龙文老师一..</a></li><li class="top3"><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D56%26id%3D143&r=article" target="_blank"  title="省溧中第五届科技节项目之一:“水火箭比赛”"  class="blue" >省溧中第五届科技节项目之一:..</a></li>
+<!--<li class="top3"><a href="#" target="_blank" class="blue" >教育教学论文管理员手册</a></li>
+<li class="top3"><a href="#" target="_blank" class="blue">教育教学论文管理员手册</a></li>
+<li class="top3"><a href="#" target="_blank" class="blue" >教育教学论文管理员手册</a></li> -->
+<li class="rt_text"><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D56%26id%3D142&r=article" target="_blank"  title="热烈祝贺我校在小高考中取得优异成绩" >热烈祝贺我校在小高考中取得..</a></li><li class="rt_text"><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D56%26id%3D140&r=article" target="_blank"  title="陈龙文工作室赴六合龙袍中学举行工作研讨活动" >陈龙文工作室赴六合龙袍中学..</a></li>
+<!--<li class="rt_text"><a href="#" target="_blank">教育教学论文管理员手册</a></li>
+<li class="rt_text"><a href="#" target="_blank">教育教学论文管理员手册</a></li>
+<li class="rt_text"><a href="#" target="_blank">教育教学论文管理员手册</a></li>
+<li class="rt_text"><a href="#" target="_blank">教育教学论文管理员手册</a></li>
+<li class="rt_text"><a href="#" target="_blank">教育教学论文管理员手册</a></li>
+<li class="rt_text"><a href="#" target="_blank">教育教学论文管理员手册</a></li>
+<li class="rt_text"><a href="#" target="_blank">教育教学论文管理员手册</a></li> -->
+</ul>
+</div>
+<div class="rt_piclink lf">
+<script  type="text/javascript" src="./images/lzshjd/jquery.SuperSlide.2.1.1.js"></script>
+<div class="focusBox" style="margin:0 auto">
+	<ul class="pic">
+    <li><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D64%26id%3D129&r=article" target="_blank"> <img src="./upload_files/article/64/1_20151210111259_hcxnn.jpg" width="294" height="207" /></a></li><li><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D64%26id%3D128&r=article" target="_blank"> <img src="./upload_files/article/64/1_20151210111229_uveer.jpg" width="294" height="207" /></a></li><li><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D64%26id%3D125&r=article" target="_blank"> <img src="./upload_files/article/64/1_20151210111242_gf8lr.jpg" width="294" height="207" /></a></li><li><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D64%26id%3D124&r=article" target="_blank"> <img src="./upload_files/article/64/1_20151210111244_dtib1.jpg" width="294" height="207" /></a></li><li><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D64%26id%3D123&r=article" target="_blank"> <img src="./upload_files/article/64/1_20151210111212_ohxph.jpg" width="294" height="207" /></a></li>
+  <!--  <li><a href="#" target="_blank"> <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27132%27%20height%3D%2796%27%20viewBox%3D%270%200%20132%2096%27%3E%3Crect%20width%3D%27132%27%20height%3D%2796%27%20fill%3D%27%23eef1f6%27%20stroke%3D%27%23d3dae4%27%20stroke-width%3D%271%27%20stroke-dasharray%3D%274%203%27/%3E%3Ctext%20x%3D%2766%27%20y%3D%2746%27%20text-anchor%3D%27middle%27%20font-family%3D%27Microsoft%20YaHei%2Csans-serif%27%20font-size%3D%2712%27%20fill%3D%27%238a94a6%27%3E%E5%9B%BE%E7%89%87%E6%9C%AA%E5%AD%98%E6%A1%A3%3C/text%3E%3Ctext%20x%3D%2766%27%20y%3D%2766%27%20text-anchor%3D%27middle%27%20font-family%3D%27Consolas%2Cmonospace%27%20font-size%3D%278%27%20fill%3D%27%23b3bcc9%27%3Eimages/lsxx_pic_10.jpg%3C/text%3E%3C/svg%3E"/></a></li>
+     <li><a href="#" target="_blank"> <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27132%27%20height%3D%2796%27%20viewBox%3D%270%200%20132%2096%27%3E%3Crect%20width%3D%27132%27%20height%3D%2796%27%20fill%3D%27%23eef1f6%27%20stroke%3D%27%23d3dae4%27%20stroke-width%3D%271%27%20stroke-dasharray%3D%274%203%27/%3E%3Ctext%20x%3D%2766%27%20y%3D%2746%27%20text-anchor%3D%27middle%27%20font-family%3D%27Microsoft%20YaHei%2Csans-serif%27%20font-size%3D%2712%27%20fill%3D%27%238a94a6%27%3E%E5%9B%BE%E7%89%87%E6%9C%AA%E5%AD%98%E6%A1%A3%3C/text%3E%3Ctext%20x%3D%2766%27%20y%3D%2766%27%20text-anchor%3D%27middle%27%20font-family%3D%27Consolas%2Cmonospace%27%20font-size%3D%278%27%20fill%3D%27%23b3bcc9%27%3Eimages/lsxx_pic_10.jpg%3C/text%3E%3C/svg%3E"/></a></li>
+      <li><a href="#" target="_blank"> <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27132%27%20height%3D%2796%27%20viewBox%3D%270%200%20132%2096%27%3E%3Crect%20width%3D%27132%27%20height%3D%2796%27%20fill%3D%27%23eef1f6%27%20stroke%3D%27%23d3dae4%27%20stroke-width%3D%271%27%20stroke-dasharray%3D%274%203%27/%3E%3Ctext%20x%3D%2766%27%20y%3D%2746%27%20text-anchor%3D%27middle%27%20font-family%3D%27Microsoft%20YaHei%2Csans-serif%27%20font-size%3D%2712%27%20fill%3D%27%238a94a6%27%3E%E5%9B%BE%E7%89%87%E6%9C%AA%E5%AD%98%E6%A1%A3%3C/text%3E%3Ctext%20x%3D%2766%27%20y%3D%2766%27%20text-anchor%3D%27middle%27%20font-family%3D%27Consolas%2Cmonospace%27%20font-size%3D%278%27%20fill%3D%27%23b3bcc9%27%3Eimages/lsxx_pic_10.jpg%3C/text%3E%3C/svg%3E"/></a></li>
+       <li><a href="#" target="_blank"> <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27132%27%20height%3D%2796%27%20viewBox%3D%270%200%20132%2096%27%3E%3Crect%20width%3D%27132%27%20height%3D%2796%27%20fill%3D%27%23eef1f6%27%20stroke%3D%27%23d3dae4%27%20stroke-width%3D%271%27%20stroke-dasharray%3D%274%203%27/%3E%3Ctext%20x%3D%2766%27%20y%3D%2746%27%20text-anchor%3D%27middle%27%20font-family%3D%27Microsoft%20YaHei%2Csans-serif%27%20font-size%3D%2712%27%20fill%3D%27%238a94a6%27%3E%E5%9B%BE%E7%89%87%E6%9C%AA%E5%AD%98%E6%A1%A3%3C/text%3E%3Ctext%20x%3D%2766%27%20y%3D%2766%27%20text-anchor%3D%27middle%27%20font-family%3D%27Consolas%2Cmonospace%27%20font-size%3D%278%27%20fill%3D%27%23b3bcc9%27%3Eimages/lsxx_pic_10.jpg%3C/text%3E%3C/svg%3E"/></a></li>
+        <li><a href="#" target="_blank"> <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27132%27%20height%3D%2796%27%20viewBox%3D%270%200%20132%2096%27%3E%3Crect%20width%3D%27132%27%20height%3D%2796%27%20fill%3D%27%23eef1f6%27%20stroke%3D%27%23d3dae4%27%20stroke-width%3D%271%27%20stroke-dasharray%3D%274%203%27/%3E%3Ctext%20x%3D%2766%27%20y%3D%2746%27%20text-anchor%3D%27middle%27%20font-family%3D%27Microsoft%20YaHei%2Csans-serif%27%20font-size%3D%2712%27%20fill%3D%27%238a94a6%27%3E%E5%9B%BE%E7%89%87%E6%9C%AA%E5%AD%98%E6%A1%A3%3C/text%3E%3Ctext%20x%3D%2766%27%20y%3D%2766%27%20text-anchor%3D%27middle%27%20font-family%3D%27Consolas%2Cmonospace%27%20font-size%3D%278%27%20fill%3D%27%23b3bcc9%27%3Eimages/lsxx_pic_10.jpg%3C/text%3E%3C/svg%3E"/></a></li> -->
+    </ul>			
+   <div class="txt-bg"></div>
+   <div class="txt">
+     <ul>	
+     <li><a href="../../_missing.html?u=%2Flist.php%3Ffid%3D64&r=list" target="_blank"  title="学校组织高一年级部分学生参观校课程基地">基地剪影</a></li><li><a href="../../_missing.html?u=%2Flist.php%3Ffid%3D64&r=list" target="_blank"  title="市教育工委刘莅书记等来我校调研省生化课程基地建设">基地剪影</a></li><li><a href="../../_missing.html?u=%2Flist.php%3Ffid%3D64&r=list" target="_blank"  title="省溧中省级课程基地申报顺利通过答辩">基地剪影</a></li><li><a href="../../_missing.html?u=%2Flist.php%3Ffid%3D64&r=list" target="_blank"  title="省课程基地两名教师受邀参加常熟中学的开放日同题异构活动">基地剪影</a></li><li><a href="../../_missing.html?u=%2Flist.php%3Ffid%3D64&r=list" target="_blank"  title="课程基地核心成员去中科大学习考察">基地剪影</a></li>				
+   <!--<li><a target="_blank" href="#">1111111111111111</a></li>
+    <li><a target="_blank" href="#">1111111111111111</a></li>
+     <li><a target="_blank" href="#">1111111111111111</a></li>
+      <li><a target="_blank" href="#">1111111111111111</a></li>
+       <li><a target="_blank" href="#">1111111111111111</a></li> -->
+     </ul>
+    </div>		    
+    <ul class="num">
+    	<li><a>1</a><span></span></li>
+        <li><a>2</a><span></span></li>
+        <li><a>3</a><span></span></li>
+        <li><a>4</a><span></span></li>
+        <li><a>5</a><span></span></li>
+    </ul>	    
+ </div>
+</div>
+<div class="rt_piclink lf">
+<div class="focusBox" style="margin:0 auto">
+	<ul class="pic">
+    <li><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D76%26id%3D126&r=article" target="_blank"> <img src="./upload_files/article//1_20151210111257_x21af.jpg" width="294" height="207" /></a></li><li><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D76%26id%3D118&r=article" target="_blank"> <img src="./upload_files/article//1_20151210101243_y5zqa.jpg" width="294" height="207" /></a></li><li><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D76%26id%3D73&r=article" target="_blank"> <img src="./upload_files/article/76/1_20151210101201_yroef.jpg" width="294" height="207" /></a></li><li><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D76%26id%3D72&r=article" target="_blank"> <img src="./upload_files/article/76/1_20151209141207_toi2x.png" width="294" height="207" /></a></li><li><a href="../../_missing.html?u=%2Fbencandy.php%3Ffid%3D76%26id%3D71&r=article" target="_blank"> <img src="./upload_files/article/76/1_20151210101237_guhfz.jpg" width="294" height="207" /></a></li>
+  <!--  <li><a href="#" target="_blank"> <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27132%27%20height%3D%2796%27%20viewBox%3D%270%200%20132%2096%27%3E%3Crect%20width%3D%27132%27%20height%3D%2796%27%20fill%3D%27%23eef1f6%27%20stroke%3D%27%23d3dae4%27%20stroke-width%3D%271%27%20stroke-dasharray%3D%274%203%27/%3E%3Ctext%20x%3D%2766%27%20y%3D%2746%27%20text-anchor%3D%27middle%27%20font-family%3D%27Microsoft%20YaHei%2Csans-serif%27%20font-size%3D%2712%27%20fill%3D%27%238a94a6%27%3E%E5%9B%BE%E7%89%87%E6%9C%AA%E5%AD%98%E6%A1%A3%3C/text%3E%3Ctext%20x%3D%2766%27%20y%3D%2766%27%20text-anchor%3D%27middle%27%20font-family%3D%27Consolas%2Cmonospace%27%20font-size%3D%278%27%20fill%3D%27%23b3bcc9%27%3Eimages/lsxx_pic_10.jpg%3C/text%3E%3C/svg%3E"/></a></li>
+     <li><a href="#" target="_blank"> <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27132%27%20height%3D%2796%27%20viewBox%3D%270%200%20132%2096%27%3E%3Crect%20width%3D%27132%27%20height%3D%2796%27%20fill%3D%27%23eef1f6%27%20stroke%3D%27%23d3dae4%27%20stroke-width%3D%271%27%20stroke-dasharray%3D%274%203%27/%3E%3Ctext%20x%3D%2766%27%20y%3D%2746%27%20text-anchor%3D%27middle%27%20font-family%3D%27Microsoft%20YaHei%2Csans-serif%27%20font-size%3D%2712%27%20fill%3D%27%238a94a6%27%3E%E5%9B%BE%E7%89%87%E6%9C%AA%E5%AD%98%E6%A1%A3%3C/text%3E%3Ctext%20x%3D%2766%27%20y%3D%2766%27%20text-anchor%3D%27middle%27%20font-family%3D%27Consolas%2Cmonospace%27%20font-size%3D%278%27%20fill%3D%27%23b3bcc9%27%3Eimages/lsxx_pic_10.jpg%3C/text%3E%3C/svg%3E"/></a></li>
+      <li><a href="#" target="_blank"> <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27132%27%20height%3D%2796%27%20viewBox%3D%270%200%20132%2096%27%3E%3Crect%20width%3D%27132%27%20height%3D%2796%27%20fill%3D%27%23eef1f6%27%20stroke%3D%27%23d3dae4%27%20stroke-width%3D%271%27%20stroke-dasharray%3D%274%203%27/%3E%3Ctext%20x%3D%2766%27%20y%3D%2746%27%20text-anchor%3D%27middle%27%20font-family%3D%27Microsoft%20YaHei%2Csans-serif%27%20font-size%3D%2712%27%20fill%3D%27%238a94a6%27%3E%E5%9B%BE%E7%89%87%E6%9C%AA%E5%AD%98%E6%A1%A3%3C/text%3E%3Ctext%20x%3D%2766%27%20y%3D%2766%27%20text-anchor%3D%27middle%27%20font-family%3D%27Consolas%2Cmonospace%27%20font-size%3D%278%27%20fill%3D%27%23b3bcc9%27%3Eimages/lsxx_pic_10.jpg%3C/text%3E%3C/svg%3E"/></a></li>
+       <li><a href="#" target="_blank"> <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27132%27%20height%3D%2796%27%20viewBox%3D%270%200%20132%2096%27%3E%3Crect%20width%3D%27132%27%20height%3D%2796%27%20fill%3D%27%23eef1f6%27%20stroke%3D%27%23d3dae4%27%20stroke-width%3D%271%27%20stroke-dasharray%3D%274%203%27/%3E%3Ctext%20x%3D%2766%27%20y%3D%2746%27%20text-anchor%3D%27middle%27%20font-family%3D%27Microsoft%20YaHei%2Csans-serif%27%20font-size%3D%2712%27%20fill%3D%27%238a94a6%27%3E%E5%9B%BE%E7%89%87%E6%9C%AA%E5%AD%98%E6%A1%A3%3C/text%3E%3Ctext%20x%3D%2766%27%20y%3D%2766%27%20text-anchor%3D%27middle%27%20font-family%3D%27Consolas%2Cmonospace%27%20font-size%3D%278%27%20fill%3D%27%23b3bcc9%27%3Eimages/lsxx_pic_10.jpg%3C/text%3E%3C/svg%3E"/></a></li>
+        <li><a href="#" target="_blank"> <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27132%27%20height%3D%2796%27%20viewBox%3D%270%200%20132%2096%27%3E%3Crect%20width%3D%27132%27%20height%3D%2796%27%20fill%3D%27%23eef1f6%27%20stroke%3D%27%23d3dae4%27%20stroke-width%3D%271%27%20stroke-dasharray%3D%274%203%27/%3E%3Ctext%20x%3D%2766%27%20y%3D%2746%27%20text-anchor%3D%27middle%27%20font-family%3D%27Microsoft%20YaHei%2Csans-serif%27%20font-size%3D%2712%27%20fill%3D%27%238a94a6%27%3E%E5%9B%BE%E7%89%87%E6%9C%AA%E5%AD%98%E6%A1%A3%3C/text%3E%3Ctext%20x%3D%2766%27%20y%3D%2766%27%20text-anchor%3D%27middle%27%20font-family%3D%27Consolas%2Cmonospace%27%20font-size%3D%278%27%20fill%3D%27%23b3bcc9%27%3Eimages/lsxx_pic_10.jpg%3C/text%3E%3C/svg%3E"/></a></li> -->
+    </ul>			
+   <div class="txt-bg"></div>
+   <div class="txt2">
+     <ul>	
+     <li><a href="../../_missing.html?u=%2Flist.php%3Ffid%3D76&r=list" target="_blank"  title="省溧中举行“基于本土资源的校本课程”开放日活动">工作室剪影</a></li><li><a href="../../_missing.html?u=%2Flist.php%3Ffid%3D76&r=list" target="_blank"  title="省“十二五”规划重点自筹课题《基于区域农业资源的校本课程建设的实践研究》顺利开题">工作室剪影</a></li><li><a href="../../_missing.html?u=%2Flist.php%3Ffid%3D76&r=list" target="_blank"  title="“陈龙文高中生化名师工作室”省级课题顺利结题">工作室剪影</a></li><li><a href="../../_missing.html?u=%2Flist.php%3Ffid%3D76&r=list" target="_blank"  title="关于公布江苏省“十二五”(2015年）规划课题评审结果的通知">工作室剪影</a></li><li><a href="../../_missing.html?u=%2Flist.php%3Ffid%3D76&r=list" target="_blank"  title="名师引领 助力成长——溧水区第一批名师工作室成立大会">工作室剪影</a></li>				
+   <!--<li><a target="_blank" href="#">1111111111111111</a></li>
+    <li><a target="_blank" href="#">1111111111111111</a></li>
+     <li><a target="_blank" href="#">1111111111111111</a></li>
+      <li><a target="_blank" href="#">1111111111111111</a></li>
+       <li><a target="_blank" href="#">1111111111111111</a></li> -->
+     </ul>
+    </div>		    
+    <ul class="num">
+    	<li><a>1</a><span></span></li>
+        <li><a>2</a><span></span></li>
+        <li><a>3</a><span></span></li>
+        <li><a>4</a><span></span></li>
+        <li><a>5</a><span></span></li>
+    </ul>	    
+ </div>
+<script type="text/javascript">
+	jQuery(".focusBox").slide({ titCell:".num li", mainCell:".pic",effect:"fold", autoPlay:true,trigger:"click",
+	startFun:function(i){				 
+		jQuery(".focusBox .txt li").eq(i).animate({"bottom":0}).siblings().animate({"bottom":-36});
+jQuery(".focusBox .txt2 li").eq(i).animate({"bottom":0}).siblings().animate({"bottom":-36});			}		});	
+</script>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+
+<script type="text/javascript">
+ <!--
+    //公共脚本文件 main.js
+    function addEvent(obj, evtType, func, cap) {
+        cap = cap || false;
+        if (obj.addEventListener) {
+            obj.addEventListener(evtType, func, cap);
+            return true;
+        } else if (obj.attachEvent) {
+            if (cap) {
+                obj.setCapture();
+                return true;
+            } else {
+                return obj.attachEvent("on" + evtType, func);
+            }
+        } else {
+            return false;
+        }
+    }
+    function getPageScroll() {
+        var xScroll, yScroll;
+        if (self.pageXOffset) {
+            xScroll = self.pageXOffset;
+        } else if (document.documentElement && document.documentElement.scrollLeft) {
+            xScroll = document.documentElement.scrollLeft;
+        } else if (document.body) {
+            xScroll = document.body.scrollLeft;
+        }
+        if (self.pageYOffset) {
+            yScroll = self.pageYOffset;
+        } else if (document.documentElement && document.documentElement.scrollTop) {
+            yScroll = document.documentElement.scrollTop;
+        } else if (document.body) {
+            yScroll = document.body.scrollTop;
+        }
+        arrayPageScroll = new Array(xScroll, yScroll);
+        return arrayPageScroll;
+    }
+    function GetPageSize() {
+        var xScroll, yScroll;
+        if (window.innerHeight && window.scrollMaxY) {
+            xScroll = document.body.scrollWidth;
+            yScroll = window.innerHeight + window.scrollMaxY;
+        } else if (document.body.scrollHeight > document.body.offsetHeight) {
+            xScroll = document.body.scrollWidth;
+            yScroll = document.body.scrollHeight;
+        } else {
+            xScroll = document.body.offsetWidth;
+            yScroll = document.body.offsetHeight;
+        }
+        var windowWidth, windowHeight;
+        if (self.innerHeight) {
+            windowWidth = self.innerWidth;
+            windowHeight = self.innerHeight;
+        } else if (document.documentElement && document.documentElement.clientHeight) {
+            windowWidth = document.documentElement.clientWidth;
+            windowHeight = document.documentElement.clientHeight;
+        } else if (document.body) {
+            windowWidth = document.body.clientWidth;
+            windowHeight = document.body.clientHeight;
+        }
+        if (yScroll < windowHeight) {
+            pageHeight = windowHeight;
+        } else {
+            pageHeight = yScroll;
+        }
+        if (xScroll < windowWidth) {
+            pageWidth = windowWidth;
+        } else {
+            pageWidth = xScroll;
+        }
+        arrayPageSize = new Array(pageWidth, pageHeight, windowWidth, windowHeight)
+        return arrayPageSize;
+    }
+    var AdMoveConfig = new Object();
+    AdMoveConfig.IsInitialized = false;
+    AdMoveConfig.ScrollX = 0;
+    AdMoveConfig.ScrollY = 0;
+    AdMoveConfig.MoveWidth = 0;
+    AdMoveConfig.MoveHeight = 0;
+    AdMoveConfig.Resize = function () {
+        var winsize = GetPageSize();
+        AdMoveConfig.MoveWidth = winsize[2];
+        AdMoveConfig.MoveHeight = winsize[3];
+        AdMoveConfig.Scroll();
+    }
+    AdMoveConfig.Scroll = function () {
+        var winscroll = getPageScroll();
+        AdMoveConfig.ScrollX = winscroll[0];
+        AdMoveConfig.ScrollY = winscroll[1];
+    }
+    addEvent(window, "resize", AdMoveConfig.Resize);
+    addEvent(window, "scroll", AdMoveConfig.Scroll);
+    function AdMove(id) {
+        if (!AdMoveConfig.IsInitialized) {
+            AdMoveConfig.Resize();
+            AdMoveConfig.IsInitialized = true;
+        }
+        var obj = document.getElementById(id);
+        obj.style.position = "absolute";
+        var W = AdMoveConfig.MoveWidth - obj.offsetWidth;
+        var H = AdMoveConfig.MoveHeight - obj.offsetHeight;
+        var x = W * Math.random(), y = H * Math.random();
+        var rad = (Math.random() + 1) * Math.PI / 6;
+        var kx = Math.sin(rad), ky = Math.cos(rad);
+        var dirx = (Math.random() < 0.5 ? 1 : -1), diry = (Math.random() < 0.5 ? 1 : -1);
+        var step = 1;
+        var interval;
+        this.SetLocation = function (vx, vy) { x = vx; y = vy; }
+        this.SetDirection = function (vx, vy) { dirx = vx; diry = vy; }
+        obj.CustomMethod = function () {
+            obj.style.left = (x + AdMoveConfig.ScrollX) + "px";
+            obj.style.top = (y + AdMoveConfig.ScrollY) + "px";
+            rad = (Math.random() + 1) * Math.PI / 6;
+            W = AdMoveConfig.MoveWidth - obj.offsetWidth;
+            H = AdMoveConfig.MoveHeight - obj.offsetHeight;
+            x = x + step * kx * dirx;
+            if (x < 0) { dirx = 1; x = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
+            if (x > W) { dirx = -1; x = W; kx = Math.sin(rad); ky = Math.cos(rad); }
+            y = y + step * ky * diry;
+            if (y < 0) { diry = 1; y = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
+            if (y > H) { diry = -1; y = H; kx = Math.sin(rad); ky = Math.cos(rad); }
+        }
+        this.Run = function () {
+            var delay = 10;
+            interval = setInterval(obj.CustomMethod, delay);
+            obj.onmouseover = function () { clearInterval(interval); }
+            obj.onmouseout = function () { interval = setInterval(obj.CustomMethod, delay); }
+        }
+    }
+ //-->
+ </script>
+
+
+
+ 		 <div id="gg1"  style="position:absolute;z-index:99999;">
+                    <img src="./upload_files/other/1_20151210081240_ukeym.png" />
+
+                      </div>
+                    <script type="text/javascript">
+                        var ad1 = new AdMove("gg1");
+                        ad1.Run();
+                    </script>
+<!--
+-->
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+clickEdit.init();
+//-->
+</SCRIPT>
+ <script>
+function MM_jumpMenu(targ,selObj,restore){ 
+  eva l(window.open(selObj.options[selObj.selectedIndex].value,targ));
+  if (restore) selObj.selectedIndex=0;
+}</script>  
+
+<div class="bottom">
+<div class="bot_link" style="width:1000px;">
+<ul>
+<li class="link_name lf">主要链接</li>
+<li class="select lf"> 
+<select class="weblinks_select"   onChange="if(this.options[this.selectedIndex].value != ''){window.open(this.options[this.selectedIndex].value,'_blank');}">
+<option value='' selected>--教育相关网站--</option>
+<option value="http://www.moe.gov.cn/">国家教育部</option>
+<option value="http://www.jyb.cn/">中国教育新闻网</option>
+<option value="http://www.chinaedu.edu.cn/">中国教育信息网</option>
+</select></li>
+<li class="select lf"> 
+<select  class="weblinks_select"   onChange="if(this.options[this.selectedIndex].value != ''){window.open(this.options[this.selectedIndex].value,'_blank');}">
+<option value='' selected>--省级教育网站--</option>
+<option value="http://www.ec.js.edu.cn/">江苏教育网</option>
+<option value="http://www.jste.net.cn/cmsplus/index.jsp">江苏教师教育网</option>
+</select>
+</li>
+<li class="select lf">
+<select  class="weblinks_select"   onChange="if(this.options[this.selectedIndex].value != ''){window.open(this.options[this.selectedIndex].value,'_blank');}">
+<option value='' selected>--市级教育网站--</option>
+<option value="http://www.njedu.gov.cn/">南京教育网</option>
+<option value="http://www.njzb.net/index.asp">南京招生信息网</option>
+<option value="http://jcjy.jsjyt.edu.cn/">南京基础教育网</option>
+</select>
+</li>
+<li class="select lf">
+<select  class="weblinks_select"   onChange="if(this.options[this.selectedIndex].value != ''){window.open(this.options[this.selectedIndex].value,'_blank');}">
+<option value='' selected>--区/县教育网站--</option>
+<option value="http://www.yhjy.cn/">雨花区教育网</option>
+<option value="http://gljy.nje.cn//">鼓楼区教育网</option>
+<option value="http://www.xwjy.cn/xwrs/manager/">玄武教育网</option>
+<option value="http://www.jyedu.cn/">建业教育网</option>
+<option value="http://www.qhqjyj.com/Html/new_index.html">秦淮教育网</option>
+<option value="http://www.qxjy.com/portal_jsps/site/xxxx/default/">栖霞教育网</option>
+<option value="http://www.pkedu.cn/">浦口教育网</option>
+<option value="http://www.gcjy.info/">高淳教育网</option>
+<option value="http://www.lsjyw.net/">溧水教育网</option>
+</select>
+</li>
+<li class="select lf">
+<select  class="weblinks_select"   onChange="if(this.options[this.selectedIndex].value != ''){window.open(this.options[this.selectedIndex].value,'_blank');}">
+<option value='' selected>--兄弟学校网站--</option>
+<option value="http://www.yhtzx.net/">南京雨花台中学</option>
+<option value="http://www.njgz.net/">南京共青团路中学</option>
+<option value="http://www.xsqzx.cn/">西善桥中学</option>
+<option value="http://www.njssjzx.cn/">孙家初级中学</option>
+<option value="http://www.njzhzz.cn/">南京中华中等专业学校</option>
+<option value="http://www.yhtaac.com/">雨花台青少年活动中心</option>
+<option value="http://www.njcjxx.net/">南京市春江学校</option>
+<option value="http://www.yzsyxx.cn/portal_jsps/site/njsyxx/default/index.jsp">南京一中 实验学校</option>
+<option value="http://www.shmsgjzx.com/">梅山高级中学</option>
+<option value="http://www.shmsyz.com/">梅山一中</option>
+<option value="http://www.shmsez.cn/">梅山二中</option>
+</select>
+</li>
+<li class="select lf"><select  class="weblinks_select"   onChange="if(this.options[this.selectedIndex].value != ''){window.open(this.options[this.selectedIndex].value,'_blank');}">
+<option value='' selected>--其他网站--</option>
+<option value="http://www.sina.com.cn/">新浪网</option>
+<option value="http://www.sohu.com/">搜狐网</option>
+<option value="http://www.xinhuanet.com/">新华网</option>
+</select></li>
+
+</ul>
+<div class="clear"></div>
+</div>
+</div>
+<style id="lsgz-shell-css">
+#lsgz-home-btn{position:fixed;right:14px;bottom:14px;z-index:2147483000;display:flex;
+align-items:center;gap:6px;padding:9px 14px;border-radius:22px;border:1px solid #b9c6d8;
+background:#fff;color:#1a56c4;font:600 13px/1 "Microsoft YaHei","PingFang SC",sans-serif;
+text-decoration:none;box-shadow:0 3px 14px rgba(20,40,80,.18);cursor:pointer;
+transition:transform .15s,box-shadow .15s;-webkit-tap-highlight-color:transparent}
+#lsgz-home-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(20,40,80,.24)}
+#lsgz-home-btn .i{font-size:15px}
+#lsgz-mask{position:fixed;inset:0;z-index:2147484000;background:rggb(0,0,0)}
+#lsgz-mask{background:rgba(15,25,45,.55);display:none;align-items:center;justify-content:center;padding:18px}
+#lsgz-mask.on{display:flex}
+#lsgz-box{background:#fff;border-radius:14px;max-width:430px;width:100%;padding:26px 26px 22px;
+box-shadow:0 18px 50px rgba(0,0,0,.3);font-family:"Microsoft YaHei","PingFang SC",sans-serif}
+#lsgz-box h4{margin:0 0 12px;font-size:17px;color:#1c2733}
+#lsgz-box p{margin:0 0 10px;font-size:13.5px;line-height:1.75;color:#4a5568}
+#lsgz-url{word-break:break-all;background:#f2f5f9;border:1px solid #e2e8f0;border-radius:8px;
+padding:9px 11px;font:12px/1.6 Consolas,monospace;color:#33415c;margin:0 0 14px}
+#lsgz-box .row{display:flex;gap:10px;flex-wrap:wrap}
+#lsgz-box button{flex:1;min-width:120px;padding:10px 14px;border-radius:9px;border:1px solid #d3dae4;
+background:#fff;color:#33415c;font:600 13px/1.4 "Microsoft YaHei",sans-serif;cursor:pointer}
+#lsgz-box button.go{background:#1a56c4;border-color:#1a56c4;color:#fff}
+#lsgz-box button:active{transform:translateY(1px)}
+@media (max-width:520px){
+  #lsgz-home-btn{right:10px;bottom:10px;padding:8px 12px;font-size:12px}
+  #lsgz-box{padding:20px 18px 18px}
+}
+</style><script id="lsgz-shell-js">
+(function(){
+  if(window.__lsgzShell) return; window.__lsgzShell=1;
+  var HOME="../index.html";
+  var INTERNAL=["lsgjzx.cn","njlsedu.cn"];
+  var btn=document.createElement('a');
+  btn.id='lsgz-home-btn'; btn.href=HOME; btn.innerHTML='<span class="i">\u2302</span> 返回复刻站主页';
+  btn.setAttribute('title','返回复刻站主页');
+  document.body?document.body.appendChild(btn):document.addEventListener('DOMContentLoaded',function(){document.body.appendChild(btn)});
+  var mask=document.createElement('div'); mask.id='lsgz-mask';
+  mask.innerHTML='<div id="lsgz-box"><h4>\u8fd9\u4e2a\u94fe\u63a5\u6307\u5411\u7ad9\u5916</h4>'
+   +'<p>\u5b83\u5c5e\u4e8e\u5f53\u5e74\u7f51\u7ad9\u7684\u5916\u90e8\u94fe\u63a5\uff08\u5176\u4ed6\u5b66\u6821\u3001\u6559\u80b2\u5c40\u3001\u65b0\u95fb\u7f51\u7ad9\u7b49\uff09\u3002'
+   +'\u672c\u7ad9\u53ea\u8fd8\u539f\u4e86\u6df7\u6c34\u9ad8\u7ea7\u4e2d\u5b66\u81ea\u5df1\u7684\u9875\u9762\uff0c<b>\u8fd9\u4e2a\u76ee\u6807\u9875\u9768\u672a\u8fd8\u539f</b>\u3002</p>'
+   +'<div id="lsgz-url"></div>'
+   +'<div class="row"><button class="go">\u4ecd\u7136\u6253\u5f00\uff08\u65b0\u7a97\u53e3\uff09</button>'
+   +'<button class="no">\u53d6\u6d88</button></div></div>';
+  document.body?document.body.appendChild(mask):document.addEventListener('DOMContentLoaded',function(){document.body.appendChild(mask)});
+  var urlEl=mask.querySelector('#lsgz-url');
+  function isInternal(h){for(var i=0;i<INTERNAL.length;i++){if(h.indexOf(INTERNAL[i])>=0)return true}return false}
+  function open(u){urlEl.textContent=u;mask.classList.add('on')}
+  function close(){mask.classList.remove('on')}
+  mask.querySelector('.no').onclick=close;
+  mask.addEventListener('click',function(e){if(e.target===mask)close()});
+  mask.querySelector('.go').onclick=function(){
+    var u=urlEl.getAttribute('data-u'); close();
+    if(u) window.open(u,'_blank','noopener');
+  };
+  document.addEventListener('click',function(e){
+    var a=e.target; while(a&&a.tagName!=='A'){a=a.parentElement}
+    if(!a) return;
+    var h=a.getAttribute('href'); if(!h) return;
+    if(/^(javascript:|#|mailto:|tel:|data:)/i.test(h)) return;
+    var abs; try{ abs=new URL(h,location.href) }catch(err){ return }
+    if(abs.protocol!=='http:'&&abs.protocol!=='https:') return;
+    if(abs.host===location.host) return;              // 同源，正常跳转
+    if(isInternal(abs.host)) return;                  // 本站已还原域名
+    e.preventDefault(); urlEl.setAttribute('data-u',abs.href); open(abs.href);
+  },true);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') close() });
+})();
+</script></body>
+</html>
+

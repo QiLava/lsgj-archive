@@ -1,0 +1,616 @@
+/*如果在新的模板中修改，只需要拷贝修改的内容 */
+
+select.weblinks_select {
+	width: 148px;
+}	
+	
+table.weblinks {
+	padding: 5px;
+	}
+
+/*内容列表标题
+td里面作为首页、下页风格
+contentlistheader_title作为标题、日期风格
+*/
+table.contentlistheader {
+	border: 1px solid #a6bcff;
+    }
+
+table.contentlistheader td {
+	background-color: #E1EAFF;
+}
+
+.contentlistheader_title {
+	background-color : #E1EAFF;
+	color : #0000A0;
+	font-weight : 400;
+	text-align: center;
+}
+
+/*阅读公告时候,标题显示风格*/
+.newflashheading {
+	font-family: '宋体',tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+ 	color: #333333;
+	text-align:center;
+	background-repeat: no-repeat;
+	background-position: top left;
+	line-height: 20px;
+	height: 20px;
+	}
+/*公告标题*/
+.newflashtitle{
+	text-align: left ;
+	font: 400 14 '宋体';
+}
+.newflashtitle_arrow{	
+	background-repeat: no-repeat;
+	height: 18px;
+	width: 12px;
+}
+/*公告内容*/
+.newflashcontent{
+
+}
+/*footer  底部版权风格 */
+.tablefooter {
+	width: 100%;
+}
+.tdfooter {
+	color: #ffffff;
+	width: 100%;
+	height: 30px;
+	valign: bottom;
+}
+.divfooter {
+        font-family: '宋体',tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+        font-size: 9pt;
+        color: #000000;
+        text-decoration: none;
+        font-weight: normal;
+}
+/* Body 风格 */
+BODY {
+	background: #FFFFFF; 
+	color: #000000;
+	margin: 0px 0px 0px 0px;
+	color : #000000;
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif; 
+	font-size: 9pt;
+	}
+td.mainWindow {
+	background: #ffffff;
+	color: #000000;
+	border: 1px solid #0B198C;
+	}	
+
+td,tr,p,div {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	}
+
+/* Styles for dhtml tabbed-pages */
+.ontab {
+	background-color: #323A15;
+	border-left: outset 2px #5B7122;
+	border-right: outset 2px #808080;
+	border-top: outset 2px #5B7122;
+	border-bottom: solid 1px #d5d5d5;
+	text-align: center;
+	cursor: hand;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.offtab {
+	background-color : #e5e5e5;
+	border-left: outset 2px #E0E0E0;
+	border-right: outset 2px #E0E0E0;
+	border-top: outset 2px #E0E0E0;
+	border-bottom: solid 1px #d5d5d5;
+	text-align: center;
+	cursor: hand;
+	font-weight: normal;
+}
+.tabpadding {
+}
+
+.tabheading {
+	background-color: #CCE197;
+	text-align: left;
+}
+
+.pagetext {
+	visibility: hidden;
+	display: none;
+	position: relative;
+	top: 0;
+}
+h4 {
+	color: #333333; 
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 14px; 
+	font-weight: bold;
+	}
+
+h5 {
+	color: #333333; 
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 13px; font-weight: bold;
+	}
+
+h6 {
+	color: #333333; 
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 12px; font-weight: bold;
+	}
+
+/* Links */
+a:link, a:visited {
+	color: #333333; 
+	text-decoration: none;
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	}
+
+a:hover {
+	color: #FF0000;	text-decoration: underline;
+	}
+
+/* Horizontal Line */
+hr {
+	background: #333333; height:2px; border: 1px solid;
+	}
+
+hr.separator {
+	background: #333333;
+	height: 1px;
+	width: 75px;
+	border: 0px;
+}
+
+/* --Default Class Settings-- */
+
+a.mainlevel:link, a.mainlevel:visited {
+	color: #333333;
+	background-position: left;
+	text-align: left;
+ }
+
+a.mainlevel:hover {
+	color: #0099CC;
+	background-position: left;
+	text-align: left;
+	}
+
+a.mainmenu:link, a.mainmenu:visited {
+	color: #333333; 
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-weight: normal;
+	}
+
+a.mainmenu:hover, {
+	color: #0099CC; text-decoration: underline;
+	}
+	
+a.sublevel:hover {
+	color: #0099CC; text-decoration: underline;
+	}
+
+a.sublevel:link, a.sublevel:visited {
+	color: #333333; 
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-weight: normal;
+}
+
+/* Content - Sections & Categories */
+.contentpane {
+	background-color : #FFFFFF;
+	}
+
+.contentpaneopen {
+	border : 0px solid #FFFFFF;
+	}
+/*阅读文章时候,文章标题显示风格*/
+.contentheading {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+ 	color: #333333;
+	text-align:center;
+	background-repeat: no-repeat;
+	background-position: top left;
+	line-height: 20px;
+	height: 20px;
+	}
+/*阅读文章时候,如果文章标题作为链接时候的显示风格*/
+.contentpagetitle {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+ 	color: #333333;
+	text-align:left;
+	}
+/*阅读文章时候,文章的作者,创建日期等显示风格*/
+.contentheading_otherinfo {
+	text-align:center;
+	}
+/* 显示某个栏目内容列表时，栏目标题风格 */
+.contentheading_list
+{
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+ 	color: #333333;
+	text-align:left;
+	background-repeat: no-repeat;
+	background-position: top left;
+	line-height: 20px;
+	height: 20px;
+	}
+table.contenttoc {
+	color: #333300;
+	background-color: #e0e0e0;
+    }
+
+table.contenttoc td {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 8pt;
+    font-weight: normal;
+    text-align:left;
+}
+
+.contentdescription {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	color: #000000;
+	text-align: left;
+	}
+
+/* Links */
+a.blogsection:link, a.blogsection:visited {
+	color: #435A76; text-decoration: none; font-weight: normal;
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	}
+
+a.blogsection:hover {
+	color: #0099CC;	text-decoration: underline;
+	font-weight: normal;
+	font-size: 10px;
+	}
+
+a.weblinks:link, a.weblinks:visited {
+	color: #405115; text-decoration: none; font-weight: normal;
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	}
+
+a.weblinks:hover {
+	color: #759328;	text-decoration: underline;
+	}
+
+a.readon:link, a.readon:visited {
+	color: #435A76; text-decoration: none; 
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	list-style: inside url(../images/read.gif);
+	list-style-type: disc;
+	display: list-item;
+	white-space: normal;
+	font-weight: normal;
+	}
+
+a.readon:hover {
+	color: #0099CC;	text-decoration: underline;
+	font-weight: normal;
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	list-style-type: disc;
+	display: list-item;
+	white-space: normal;
+	}
+
+table.moduletable {
+	margin: 0px 0px 3px 0px;
+	width: 100%;
+	border-left: solid 1px #E0E0E0;
+	border-right: solid 1px #E0E0E0;
+	border-top: solid 0px #E0E0E0;
+	border-bottom: solid 1px #E0E0E0;
+	padding: 0px;
+	}
+
+table.moduletable th {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #32405F;
+	text-align: center;
+	width: 100%;
+	height: 22px;
+	border-bottom: 0px solid #333333;
+	line-height: 20px;
+	background-color: #E0E0E0; 
+	background-image: url(../images/module_bg.gif); 
+	}
+
+table.moduletable td {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	}
+
+.componentheading {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: x-small;
+	font-weight: bold;
+ 	color: #333333;
+	text-align:left;
+	background-repeat: no-repeat;
+	line-height: 20px;
+	height: 20px;	
+	white-space: normal;
+	display: list-item;
+	border-bottom: 1px solid #666666;
+	}
+
+.button {
+	color: #333333; 
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	
+	font-weight: bold;
+	text-align: center;
+	font-size: 12px;
+	font: bold;
+	/*background: White;
+	border: 1px solid #6282A6;*/border:none;
+	background:url(../images/bq_submitbutton_bg.jpg) no-repeat;
+	width:38px;
+	height:24px;
+	}
+
+.inputbox {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	background: #EDF5FE;
+	border: 1px solid #6282A6;
+	}
+
+/** category text format and links **/
+.category {
+	color: #333333; 
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold; 
+	text-decoration: none;
+	}
+
+a.category:link, a.category:visited {
+	color: #333333; font-weight: bold;
+	}
+
+a.category:hover {
+	color: #FF9900;
+	}
+
+.poll {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #333333;
+	line-height: 14px
+	}
+
+.pollstableborder {
+	border: 1px solid #333333;
+}
+
+.sectiontableentry1, {
+	background-color : #EDF5FE;
+	}
+	
+.sectiontableentry2 {
+	background-color : #FFFFFF;
+	}
+
+.sectiontableheader {
+	background-color : #D9D8DC;
+	color : #292925;
+	font-weight : bold;
+	}
+
+.small {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	color: #666666;
+	text-decoration: none;
+	font-weight: normal;
+	}
+
+.smalldark {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+        color: #FFFFFF;
+        text-decoration: none;
+        font-weight: normal;
+        }
+
+
+.newsfeedheading {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #333333;
+        text-align:left;
+        }
+
+.newsfeeddate {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	color: #A7CF43;
+	font-weight: normal;
+}
+
+.createdate {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	color: #333333;
+	text-decoration: none;
+	font-weight: normal;
+	}
+
+.modifydate {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	color: #666666;
+	text-decoration: none;
+	font-weight: normal;
+	text-align:right;
+	}
+
+ul {
+	margin: 0px 0px 0px 0px;
+	}
+
+li {
+	list-style: none;
+	}
+
+.fase4rdf {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	color: #242D0C; font-weight: normal;
+	}
+
+a.fase4rdf:link {
+	font-size: 11px; font-weight: normal; color: #405115;
+	}
+
+a.fase4rdf:hover {
+	font-weight: bold; color: #759328;
+	}
+
+table.searchintro {
+  	background-color: #FFFFFF;
+	border: 1px solid #759328;
+	}
+
+table.contact {
+	background-color: #FFFFFF;
+	}
+
+table.contact td.icons {
+	background-color: #B5C4D7;
+	}
+
+table.contact td.details {
+	background-color: #EDF5FE;
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	}
+
+.pagenav {
+	font-weight: normal;
+}
+
+a.pagenav, a.pagenav:visited {
+	font-weight: normal;
+	color: blue;
+}
+
+a.pagenav:hover {
+	color: #FF9900;
+}
+
+.pagenavbar {
+	
+}
+
+/* Content voting */
+.content_rating {
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+.content_vote {
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+
+a.bar:link, a.bar:visited {
+        color: White; text-decoration: none; font-weight: normal;
+ 	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+       font: bold;
+        }
+
+a.bar:hover {
+        color: #A7CF43;        text-decoration: none;
+        }
+		  
+.searchbox {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	color: #333333;
+	background: #FFFFFF;
+	border: 1px solid;
+	height: 18px;
+	line-height: 13px;
+	}
+	
+.title {
+	font: bold larger;
+	letter-spacing: 4px;
+}
+
+a.pathway, a.pathway:visited {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	color: #0000FF;
+}
+
+a.pathway:hover {
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	color: #0099CC;
+}
+/*Main VBTemplate CSS*/
+
+.smallfont
+{
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+}
+.tborder
+{
+	background: #ffffff;
+	color: #000000;
+	border: 0px solid gray;
+}
+.thead
+{
+	background: #5C7099 repeat-x top left;
+	background-image:  url(../images/gradient_thead.gif);
+	font-family: '宋体',verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	font-size: 9pt;
+	color: #FFFFFF; 
+}
+
+.thead a:link
+{
+	color: #FFFFFF;
+}
+.thead a:visited
+{
+	color: #FFFFFF;
+}
+.thead a:hover, .thead a:active
+{
+	color: #FFFF00;
+}
+.vbmainwindow
+{
+	background: #FFFFFF;
+	color: #000000;
+}

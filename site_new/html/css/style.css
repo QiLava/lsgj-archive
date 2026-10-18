@@ -1,0 +1,400 @@
+/*
+*样式初始化
+*/
+*{ 
+	padding: 0; 
+	margin: 0; 
+} 
+body{
+	font-size:12px;
+}
+table{ 
+	/*border-collapse: collapse; */
+	border-spacing: 0; 
+}
+td{
+	VERTICAL-ALIGN: top;
+}
+fieldset,img { 
+	border: 0; 
+} 
+address,caption,cite,code,dfn,em,strong,th,var { 
+	font-weight: normal; 
+	font-style: normal; 
+} 
+ol,ul,li{ 
+	list-style: none; 
+} 
+caption,th { 
+	text-align: left; 
+} 
+h1,h2,h3,h4,h5,h6 { 
+	font-weight: normal;
+	font-size: 100%; 
+} 
+q:before,q:after { 
+	content:”; 
+} 
+abbr,acronym { 
+	border: 0; 
+}
+
+.wrap{
+	width:990px;
+	margin:auto;
+}
+.mt10{
+	margin-top:10px;
+}
+.mb10{
+	margin-bottom:10px;
+}
+.cleardiv{
+	clear:both;
+}
+.FL{
+	float:left;
+}
+.FR{
+	float:right
+}
+.F14{
+	font-size:14px;
+}
+.FB{
+	font-weight:bold;
+}
+.normal{
+	font-style:normal;
+	font-size:12px;
+	font-weight:normal;
+	color:#333;
+	padding:0;
+	margin:0;
+	text-align:left;
+}
+.cleardiv{
+	clear:both;
+}
+/*******************************************网站头部************************************/
+/*
+*顶部信息
+*/
+#header_login{
+	margin:auto;
+	height:30px;
+	line-height:30px;
+	background:url(topbga.gif) left top repeat-x;
+}
+#header_login .login{
+	width:60%;
+	padding-left:10px;
+}
+#header_login .login span{
+	display:block;
+	float:left;
+	padding-right:5px;
+}
+#header_login .login span.word em{
+	color:red;
+}
+#header_login .login span.word a{
+	color:blue;
+}
+#header_login .login span.input{
+	padding-top:4px !important;
+	padding-top:3px;
+}
+#header_login .login span.input input{
+	width:100px;
+	border:#CCC solid 1px;
+	height:18px;
+}
+#header_login .login span.sub{
+	padding:3px 10px 0 10px;
+}
+#header_login .login span.sub input{
+	width:50px;
+	text-align:center;
+}
+#header_login .login span.sub input{
+	width:50px;
+	text-align:center;
+}
+#header_login .info{
+	width:40%;
+	text-align:right;
+	padding-right:10px;
+	word-spacing:5px;
+	color:#666;
+}
+#header_login .info a{
+	color:blue;
+}
+/*
+*logo样式
+*/
+#header_logo{
+	background:url(logo_bg.gif) right bottom no-repeat;
+	height:80px;
+	margin:auto;
+}
+#header_logo td{
+	vertical-align:middle;
+	text-align:left;
+}
+
+/**/
+#header_menu{
+	margin:auto;
+	width:970px;
+	height:38px;
+	background:url(header_menu.gif) center bottom no-repeat;
+	padding-left:20px;
+}
+#header_menu li{
+	margin-top:3px;
+	line-height:35px;
+	float:left;
+	background:url(menu_spacing.gif) left 11px no-repeat;	
+}
+#header_menu li a{
+	display:block;
+	padding:0 15px 0 16px;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+	text-decoration:none;	
+}
+#header_menu li a.choose{
+	background:#FFF url(menu_array.gif) center bottom no-repeat;
+	color:#333;
+}
+#header_menu li.post{
+	margin-top:0;
+	line-height:38px;
+	float:right;
+	background:url(menu_post.gif) left top no-repeat;	
+}
+#header_menu li.post a{
+	padding-left:30px;
+	background:url(menu_note.gif) 18px 10px no-repeat;	
+}
+/*
+*头部搜索
+*/
+#header_search td{
+	padding-left:200px;
+	background:url(head_search.gif) 120px top no-repeat;
+	vertical-align:middle;
+}
+#header_search .search{
+	height:30px;
+}
+#header_search .search span{
+	display:block;
+	float:left;
+	padding-right:10px;
+}
+#header_search .search span.input input{
+	height:16px;
+	width:300px;
+}
+#header_search .search span.sub input{
+	width:60px;
+	text-align:center;
+}
+#header_search .search span.word{
+	padding-top:5px;
+}
+#header_search .search span a{
+	color:#0F42A6;
+}
+#header_search .moresearch a.b{
+	color:red;
+}
+/*
+*当前位置
+*/
+#nav_guide{
+	width:990px;
+	margin:0 auto 10px auto;
+	border:#DDD solid 1px;
+	line-height:25px;
+	color:#666;
+}
+#nav_guide a{
+	color:#666;
+}
+#nav_guide .t1,#nav_guide .t2{
+	float:left;
+}
+#nav_guide .t1{
+	padding-left:40px;
+	padding-right:5px;
+	border-right:#DDD solid 1px;
+	background:url(home_icon.gif) 20px 6px no-repeat;
+}
+#nav_guide .t2{
+	padding-left:10px;
+}
+/*
+*底部样式
+*/
+#copyright{
+	clear:both;
+	width:990px;
+	margin:10px auto 0 auto;
+	background:url(footbg.gif) left top repeat-x;
+	text-align:center;
+	padding-top:10px;
+	line-height:20px;
+	color:#666;
+	padding-bottom:20px;
+}
+#copyright a{
+	color:#666;
+}
+
+
+
+/*********************************************************************
+**********************************************************************
+AJAX在线编辑DIV容器
+这个会员看不到.只是版主管理员才可以看到.这是后台风格
+一般不必修改了.修改了会员也看不到
+**********************************************************************
+*********************************************************************/
+#AjaxEditTable{
+	border:1px solid #BEDDFF;
+	background:#FFF;
+}
+#AjaxEditTable .head{
+	height: 21px;
+	background: #DBEAFF;
+	border-bottom:1px solid #BEDDFF;
+	padding:3px 5px 0 7px;
+}
+#AjaxEditTable .head a{
+	color:#FFF;
+}
+#AjaxEditTable .head span{
+	DISPLAY: block; 
+	FLOAT: right;
+}
+#AjaxEditTable .middle{
+	background:#FFF;
+	line-height:18px;
+	padding:5px;
+}
+#AjaxEditTable .middle input,#AjaxEditTable .middle textarea{
+	border:1px solid #BEDDFF;
+	background:#FFF;
+}
+
+.clear{
+	clear: both;
+}
+.fast{
+	float: left;
+	margin-top: 10px;
+}
+.flash_button .next{
+	float: left;
+	padding: 47px 28px;
+	cursor: pointer;
+}
+.flash_button .prev{
+	float: right;
+	padding: 48px 29px;
+	cursor: pointer;
+}
+.kstd{
+	background:url(../image/kstd.png) no-repeat left;
+	width: 55px;
+	height: 133px;
+	float: left;
+}
+.kstd p{
+	width: 5px;
+	color: #fff;
+	font-size: 18px;
+	padding: 20px 20px;
+}
+.icon_all p{
+	text-align: center;
+	padding-top: 5px;
+	font-size: 16px;
+	color: #333;
+}
+.icon_all a{
+	display: block;
+	padding-top: 20px;
+}
+.icon_all{
+    float: left;
+    height:140px;
+    overflow:hidden;
+}
+.icon_all li{
+	float: left;
+	width: 85px;
+	height: 133px;
+	background: url(../image/line_2.png) no-repeat right;
+	text-align: center;
+	  transition: all 0.6s;
+}
+.icon_all li:hover{
+	cursor: pointer;
+    transform: translate(0, 4px);
+    -webkit-transform: translate(0, 4px);
+    -moz-transform: translate(0, 4px);
+    -o-transform: translate(0, 4px);
+    -ms-transform: translate(0, 4px);
+	
+}
+.icon_all li .iconhover1:hover{
+	background: url(../image/icon_hover1.png) no-repeat top center;
+	width: 85px;
+	height: 133px;
+}
+.icon_all li .iconhover2:hover{
+	background: url(../image/icon_hover2.png) no-repeat top center;
+	width: 85px;
+	height: 133px;
+}
+.icon_all li .iconhover3:hover{
+	background: url(../image/icon_hover3.png) no-repeat top center;
+	width: 85px;
+	height: 133px;
+}
+.icon_all li .iconhover4:hover{
+	background: url(../image/icon_hover4.png) no-repeat top center;
+	width: 85px;
+	height: 133px;
+}
+.icon_all li .iconhover5:hover{
+	background: url(../image/icon_hover5.png) no-repeat top center;
+	width: 85px;
+	height: 133px;
+}
+.icon_all li .iconhover6:hover{
+	background: url(../image/icon_hover6.png) no-repeat top center;
+	width: 85px;
+	height: 133px;
+}
+.icon_all li .iconhover7:hover{
+	background: url(../image/icon_hover7.png) no-repeat top center;
+	width: 85px;
+	height: 133px;
+}
+.icon_all li .iconhover8:hover{
+	background: url(../image/icon_hover8.png) no-repeat top center;
+	width: 85px;
+	height: 133px;
+}
+.icon_all li .iconhover9:hover{
+	background: url(../image/icon_hover9.png) no-repeat top center;
+	width: 85px;
+	height: 133px;
+}

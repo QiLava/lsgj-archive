@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>这个页面没能还原 - 江苏省溧水高级中学时光机</title>
+<style>
+  :root{--win-bg:#c0c0c0;--title-a:#0a246a;--title-b:#3a6ea5;--link:#0000ee}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Tahoma,Verdana,"宋体","Microsoft YaHei",sans-serif;background:#008080;
+    color:#1a1a1a;line-height:1.75;padding:20px 14px 70px;min-height:100vh}
+  .wrap{max-width:640px;margin:0 auto}
+  .win{background:var(--win-bg);border:2px outset #fff;box-shadow:4px 4px 0 rgba(0,0,0,.35);margin-bottom:16px}
+  .win-title{background:linear-gradient(180deg,var(--title-a),var(--title-b));color:#fff;
+    padding:7px 12px;font-weight:700;font-size:13px;display:flex;gap:8px;align-items:center}
+  .win-title .dots{margin-left:auto;display:flex;gap:4px}
+  .win-title .dots i{width:15px;height:14px;background:var(--win-bg);border:1px outset #fff;display:block}
+  .win-body{padding:20px 22px}
+  h1{color:#fff;font-size:21px;text-shadow:2px 2px 0 #000;line-height:1.4}
+  .sub{color:#bfe3ff;font-size:12px;margin-top:6px}
+  .big{font-size:16px;color:#8b0000;font-weight:700;margin-bottom:12px}
+  .reason{background:#fff;border:2px inset #fff;padding:16px 18px;margin-bottom:14px}
+  .reason .tag{display:inline-block;background:#8b0000;color:#fff;font-size:11px;
+    padding:2px 9px;border-radius:3px;margin-bottom:10px;letter-spacing:1px}
+  .reason p{font-size:13.5px;color:#333;margin-bottom:8px}
+  .reason p:last-child{margin-bottom:0}
+  .urlbox{background:#f2f2f2;border:1px solid #a8a4a0;padding:9px 11px;
+    font:11.5px/1.6 Consolas,"Courier New",monospace;color:#444;
+    word-break:break-all;margin:10px 0}
+  .tip{background:#fffbe6;border:2px inset #fff;padding:13px 15px;font-size:12.5px;color:#5a4a1a}
+  .tip b{color:#8b5a00}
+  .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+  .btn{background:var(--win-bg);border:2px outset #fff;padding:8px 18px;font-size:13px;
+    font-weight:700;color:#000;cursor:pointer;text-decoration:none;font-family:inherit}
+  .btn:active{border-style:inset}
+  @media (max-width:600px){
+    body{padding:12px 8px 50px}
+    h1{font-size:17px}
+    .win-body{padding:15px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="win">
+    <div class="win-title"><span>⚠️</span> 页面未能还原
+      <span class="dots"><i></i><i></i><i></i></span></div>
+    <div class="win-body">
+      <h1>这个链接指向的页面，当年没有被存档</h1>
+      <div class="sub">江苏省溧水高级中学官网时光机</div>
+    </div>
+  </div>
+
+  <div class="win">
+    <div class="win-title"><span>🔍</span> 具体原因
+      <span class="dots"><i></i><i></i><i></i></span></div>
+    <div class="win-body">
+      <div class="big" id="ttl">正在读取原因…</div>
+      <div class="reason">
+        <span class="tag" id="tag">原因</span>
+        <p id="desc"></p>
+        <div class="urlbox" id="url"></div>
+        <p id="extra" style="color:#666;font-size:12.5px"></p>
+      </div>
+
+      <div class="tip">
+        <b>为什么会这样？</b><br>
+        本站所有页面来自互联网档案馆（Wayback Machine）的历史快照。
+        档案馆当年只爬取了网站的一部分页面——导航栏里的很多栏目、
+        文章附带的 Word/Excel 文件、以及网站后台，都从未被抓取过。
+        <b>这不是还原工作的疏漏，是数据源本身没有这些内容。</b>
+      </div>
+
+      <div class="acts">
+        <a class="btn" id="home" href="../index.html">⌂ 返回复刻站主页</a>
+        <a class="btn" href="javascript:history.back()">← 返回上一页</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var q = new URLSearchParams(location.search);
+  var raw = q.get('u') || '';
+  var r = q.get('r') || 'unknown';
+
+  var REASONS = {
+    list:   { tag:'栏目列表页未存档',
+              desc:'你点的是网站某个栏目的列表页（如「招考专栏」「德育天地」）。' +
+                   '互联网档案馆当年只抓到了其中 18 个栏目页，这个栏目的文章列表从未被爬取，' +
+                   '因此既看不到文章目录，也无法进入该栏下的具体文章。',
+              extra:'如果你想找的内容在这个栏目里，可以试试从主页进其他有存档的栏目，' +
+                    '或者到「后期官网」和「区教育网」里找同时期的文章。' },
+    article:{ tag:'文章页未存档',
+              desc:'这是一篇文章的正文页。档案馆抓到了它的链接（通常来自某个列表页），' +
+                   '但没有抓取正文内容本身。',
+              extra:'同栏目下其他文章可能有存档，可以回到列表页换一篇看看。' },
+    admin:  { tag:'网站后台 / 登录入口',
+              desc:'这个链接指向当年网站的后台管理或用户登录页面（如 /man/、/admin/、login.php）。' +
+                   '这些页面当年就不对公众开放，档案馆也没有抓取，而且本来就不该被还原。',
+              extra:'属于正常情况，直接忽略即可。' },
+    attach: { tag:'附件未被存档',
+              desc:'你点的是当年通知/公告附带的 Word、Excel、PDF 等文件。' +
+                   '档案馆只存了网页正文，附件文件基本都没有抓取。',
+              extra:'全校共有约 456 个这类附件链接，全部无法还原。' },
+    inner:  { tag:'原站内网地址（当年就是坏的）',
+              desc:'这个链接用的是 file:// 协议指向一个内网 IP（172.20.1.1）。' +
+                   '这是当年网站编辑在本机环境下插入的链接，对外发布时就已经失效，' +
+                   '不是还原造成的问题。',
+              extra:'原站自身的死链。' },
+    wayback:{ tag:'档案馆地址残留',
+              desc:'这个链接里还带着 web.archive.org 的地址，是当年抓取时改写不完整留下的。' +
+                   '它本来应该指向网站的某个页面。',
+              extra:'属于还原时的清理遗漏。' },
+    tpl:    { tag:'原站模板未渲染',
+              desc:'链接内容是一段没有被正确渲染的模板代码（如 &lt;f:getPrevInfo(@url)&gt;）。' +
+                   '这是原网站程序自身的 bug，发布出来的 HTML 里就带着这段代码。',
+              extra:'原站的问题，与还原无关。' },
+    gone:   { tag:'页面已不存在',
+              desc:'原站在这一时期之后更换了系统或域名，这个地址在新系统里没有对应页面，' +
+                   '档案馆抓取时返回的就是 404。',
+              extra:'' },
+    unknown:{ tag:'链接目标缺失',
+              desc:'这个链接指向的文件在还原成果里不存在。可能从未被存档，' +
+                   '也可能是清理过程中的遗漏。',
+              extra:'' }
+  };
+
+  var info = REASONS[r] || REASONS.unknown;
+  document.getElementById('ttl').textContent = info.tag;
+  document.getElementById('tag').textContent = info.tag;
+  document.getElementById('desc').textContent = info.desc;
+  document.getElementById('extra').textContent = info.extra || '';
+  document.getElementById('url').textContent = raw ? decodeURIComponent(raw) : '（未提供原始地址）';
+
+  // 返回主页按深度算
+  var depth = 1 + (location.pathname.split('/').length - 2);
+  document.getElementById('home').href = '../'.repeat(depth) + 'index.html';
+})();
+</script>
+</body>
+</html>

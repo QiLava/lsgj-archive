@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>页面未找到 - 江苏省溧水高级中学时光机</title>
+<style>
+  :root{--win-bg:#c0c0c0;--title-a:#0a246a;--title-b:#3a6ea5;--link:#0000ee}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Tahoma,Verdana,"宋体","Microsoft YaHei",sans-serif;background:#008080;
+    color:#1a1a1a;line-height:1.75;padding:20px 14px 70px;min-height:100vh}
+  .wrap{max-width:620px;margin:0 auto}
+  .win{background:var(--win-bg);border:2px outset #fff;box-shadow:4px 4px 0 rgba(0,0,0,.35);margin-bottom:16px}
+  .win-title{background:linear-gradient(180deg,var(--title-a),var(--title-b));color:#fff;
+    padding:7px 12px;font-weight:700;font-size:13px;display:flex;gap:8px;align-items:center}
+  .win-title .dots{margin-left:auto;display:flex;gap:4px}
+  .win-title .dots i{width:15px;height:14px;background:var(--win-bg);border:1px outset #fff;display:block}
+  .win-body{padding:20px 22px}
+  h1{color:#fff;font-size:20px;text-shadow:2px 2px 0 #000;line-height:1.4}
+  .sub{color:#bfe3ff;font-size:12px;margin-top:6px}
+  .big{font-size:15px;color:#8b0000;font-weight:700;margin-bottom:12px}
+  .box{background:#fff;border:2px inset #fff;padding:16px 18px;margin-bottom:14px;font-size:13.5px;color:#333}
+  .box .tag{display:inline-block;background:#8b0000;color:#fff;font-size:11px;
+    padding:2px 9px;border-radius:3px;margin-bottom:10px;letter-spacing:1px}
+  .urlbox{background:#f2f2f2;border:1px solid #a8a4a0;padding:9px 11px;
+    font:11.5px/1.6 Consolas,"Courier New",monospace;color:#444;
+    word-break:break-all;margin:10px 0}
+  .tip{background:#fffbe6;border:2px inset #fff;padding:13px 15px;font-size:12.5px;color:#5a4a1a}
+  .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+  .btn{background:var(--win-bg);border:2px outset #fff;padding:8px 18px;font-size:13px;
+    font-weight:700;color:#000;cursor:pointer;text-decoration:none;font-family:inherit;display:inline-block}
+  .btn:active{border-style:inset}
+  @media (max-width:600px){body{padding:12px 8px 50px}h1{font-size:17px}.win-body{padding:15px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="win">
+    <div class="win-title"><span>⚠️</span> 页面未找到
+      <span class="dots"><i></i><i></i><i></i></span></div>
+    <div class="win-body">
+      <h1>这个地址在还原成果里不存在</h1>
+      <div class="sub">江苏省溧水高级中学官网时光机</div>
+    </div>
+  </div>
+
+  <div class="win">
+    <div class="win-title"><span>🔍</span> 说明
+      <span class="dots"><i></i><i></i><i></i></span></div>
+    <div class="win-body">
+      <div class="big">你访问的页面没有找到</div>
+      <div class="box">
+        <span class="tag">可能是这几种情况</span>
+        <p>① 这个页面当年<b>从未被互联网档案馆抓取</b>，所以不存在于还原成果里；</p>
+        <p>② 链接地址<b>拼写有误</b>，或者是从别处复制时被截断了；</p>
+        <p>③ 这个地址属于<b>当年的动态页面</b>（如 list.php、bencandy.php），
+           还原后已改成静态文件名，旧地址无法直接访问。</p>
+        <div class="urlbox" id="u">（正在读取当前地址…）</div>
+      </div>
+
+      <div class="tip">
+        <b>建议：</b>从复刻站主页进入，用各站点自己的导航栏浏览。
+        点击「未存档」的链接时会弹出具体原因说明，而不是像这样直接找不到。
+      </div>
+
+      <div class="acts">
+        <a class="btn" href="/index.html" id="home">⌂ 返回复刻站主页</a>
+        <a class="btn" href="javascript:history.back()">← 返回上一页</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var el = document.getElementById('u');
+  if (el) el.textContent = decodeURIComponent(location.pathname + location.search);
+})();
+</script>
+</body>
+</html>

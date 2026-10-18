@@ -1,0 +1,15 @@
+# 临时与缓存
+_trash/
+_tmp/
+__pycache__/
+*.pyc
+
+# 诊断中间产物（可选保留，视需要删掉注释）
+# broken_links.json
+# broken_clickable.json
+# real404.json
+
+# 系统文件
+Thumbs.db
+.DS_Store
+desktop.ini

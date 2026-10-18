@@ -1,0 +1,9 @@
+5	http://students.lsgjzx.cn/images/free_login.gif
+1	http://students.lsgjzx.cn/pub/jquery.js
+1	http://students.lsgjzx.cn/pub/cliengine.js
+1	http://students.lsgjzx.cn/pub/lang.js
+1	http://students.lsgjzx.cn/images/free_login_bg.gif
+1	http://students.lsgjzx.cn/images/free_login-ag.gif
+1	http://students.lsgjzx.cn/images/free_login-bcr.gif
+1	http://students.lsgjzx.cn/images/qr-code-sm.gif
+1	http://students.lsgjzx.cn/images/qr-code-lg.png

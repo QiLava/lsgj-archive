@@ -1,0 +1,31 @@
+# Cloudflare Pages 缓存策略
+# HTML 不缓存，保证更新立即生效
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+# 静态资源长缓存（图片/CSS/JS 内容不变）
+/*.jpg
+  Cache-Control: public, max-age=2592000
+/*.jpeg
+  Cache-Control: public, max-age=2592000
+/*.JPG
+  Cache-Control: public, max-age=2592000
+/*.png
+  Cache-Control: public, max-age=2592000
+/*.gif
+  Cache-Control: public, max-age=2592000
+/*.ico
+  Cache-Control: public, max-age=2592000
+/*.css
+  Cache-Control: public, max-age=2592000
+/*.js
+  Cache-Control: public, max-age=2592000
+/*.swf
+  Cache-Control: public, max-age=2592000
+
+# 中文文件名的资源，强制按 UTF-8 处理
+/*
+  X-Content-Type-Options: nosniff

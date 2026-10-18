@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>溧水教育网 - 登录</title>
+	<link rel="shortcut icon" href="/favicon.ico"> 
+<link href="/widget/Hplus/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+<link href="/widget/Hplus/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+<link href="/widget/Hplus/css/animate.css" rel="stylesheet">
+<link href="/widget/Hplus/css/style.css?v=4.1.0" rel="stylesheet">
+<style>
+.row select,.row input,.row button{height:32px;}
+</style>
+	
+<script src="/widget/Hplus/js/jquery.min.js?v=2.1.4"></script>
+<script src="/widget/Hplus/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="/widget/Hplus/js/plugins/layer/layer.min.js"></script>
+
+<script src="/man/js/local.js"></script>
+<script src="/man/js/std.js"></script>
+    <link href="/widget/Hplus/css/login.css" rel="stylesheet">
+	<script src="/ppf/js/jquery-1.min.js"></script> 
+	<script src="/ppf/js/fun.js"></script>
+	
+    <script>
+        if (window.top !== window.self) {
+            window.top.location = window.location;
+        }
+		document.onselectstart = function(){
+			event.returnValue = false;
+		}
+		// 或者直接返回整个事件
+		document.onselectstart = function(){
+			return false;
+		}
+    </script>
+
+</head>
+
+<body class="signin" >
+    <div class="signinpanel animated fadeIn"> 
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="signin-info">
+                    <div class="logopanel m-b">
+                        <h1>CMS-v1.0</h1>
+                    </div>
+                    <div class="m-b"></div>
+                    <h4>欢迎使用</h4>
+                    <strong > <a href="index.html">回到首页</a></strong>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <form role="form">
+                    <h4 class="no-margins">登录：</h4>
+                    <input type="text" class="form-control uname" placeholder="用户名" id="usr"/>
+                    <input type="password" class="form-control pword m-b" placeholder="密码" id="pwd" onkeydown="if(event.keyCode==13) {dosome();}"/>
+                    <a "" style="display:none;">忘记密码了？</a>
+                    <button type="button" class="btn btn-primary btn-outline btn-block" id="btn">登录</button>
+					<a class="btn btn-primary" href="http://sso.njlsedu.cn//?t=login&url=Lz90PWxvZ2luJnVybD1MMjFoYmk4" id="tl_url" style="display:none"> 统一登陆 </a> 	 
+                </form>
+            </div>
+        </div>
+        <div class="signup-footer">
+            <div class="pull-left">
+                &copy; 2016 All Rights Reserved. 溧水教育网
+            </div>
+        </div>
+    </div>
+	<div id="ologin" style="display:none;color:#333">
+	<ul class="nav nav-tabs">
+		<li class="active" did="band"><a href="javascript:void(0)">绑定现有账号</a></li>
+		<li class="" did="create"><a href="javascript:void(0)">创建新账号</a></li>
+	</ul>
+    <div style="margin-top:20px;">
+		<div id="band" class="col-sm-12">	
+			<input type="text" class="form-control uname" placeholder="用户名" id="usr_b"/>
+			<input type="password" class="form-control pword m-b" placeholder="密码" id="pwd_b"/>			
+			<button type="button" class="btn btn-primary btn-outline btn-block" id="btn_band">绑定</button>
+		</div>
+        <div id="create" class="col-sm-12" style="display:none">
+			<input type="text" class="form-control uname" placeholder="请输入用户名" id="usr_c"/><span class="label label-warning">用户名由3-25位字母、数字、下划线组成</span>
+			<input type="password" class="form-control pword m-b" placeholder="请输入密码" id="pwd_c"/>		
+            <input type="password" class="form-control pword m-b" placeholder="请确认密码" id="pwd2_c"/>				
+			<button type="button" class="btn btn-primary btn-outline btn-block" id="btn_create">创建</button>
+		</div>		
+    </div>               					
+</div>
+<style id="lsgz-shell-css">
+#lsgz-home-btn{position:fixed;right:14px;bottom:14px;z-index:2147483000;display:flex;
+align-items:center;gap:6px;padding:9px 14px;border-radius:22px;border:1px solid #b9c6d8;
+background:#fff;color:#1a56c4;font:600 13px/1 "Microsoft YaHei","PingFang SC",sans-serif;
+text-decoration:none;box-shadow:0 3px 14px rgba(20,40,80,.18);cursor:pointer;
+transition:transform .15s,box-shadow .15s;-webkit-tap-highlight-color:transparent}
+#lsgz-home-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(20,40,80,.24)}
+#lsgz-home-btn .i{font-size:15px}
+#lsgz-mask{position:fixed;inset:0;z-index:2147484000;background:rggb(0,0,0)}
+#lsgz-mask{background:rgba(15,25,45,.55);display:none;align-items:center;justify-content:center;padding:18px}
+#lsgz-mask.on{display:flex}
+#lsgz-box{background:#fff;border-radius:14px;max-width:430px;width:100%;padding:26px 26px 22px;
+box-shadow:0 18px 50px rgba(0,0,0,.3);font-family:"Microsoft YaHei","PingFang SC",sans-serif}
+#lsgz-box h4{margin:0 0 12px;font-size:17px;color:#1c2733}
+#lsgz-box p{margin:0 0 10px;font-size:13.5px;line-height:1.75;color:#4a5568}
+#lsgz-url{word-break:break-all;background:#f2f5f9;border:1px solid #e2e8f0;border-radius:8px;
+padding:9px 11px;font:12px/1.6 Consolas,monospace;color:#33415c;margin:0 0 14px}
+#lsgz-box .row{display:flex;gap:10px;flex-wrap:wrap}
+#lsgz-box button{flex:1;min-width:120px;padding:10px 14px;border-radius:9px;border:1px solid #d3dae4;
+background:#fff;color:#33415c;font:600 13px/1.4 "Microsoft YaHei",sans-serif;cursor:pointer}
+#lsgz-box button.go{background:#1a56c4;border-color:#1a56c4;color:#fff}
+#lsgz-box button:active{transform:translateY(1px)}
+@media (max-width:520px){
+  #lsgz-home-btn{right:10px;bottom:10px;padding:8px 12px;font-size:12px}
+  #lsgz-box{padding:20px 18px 18px}
+}
+</style><script id="lsgz-shell-js">
+(function(){
+  if(window.__lsgzShell) return; window.__lsgzShell=1;
+  var HOME="../index.html";
+  var INTERNAL=["lsgjzx.cn","njlsedu.cn"];
+  var btn=document.createElement('a');
+  btn.id='lsgz-home-btn'; btn.href=HOME; btn.innerHTML='<span class="i">\u2302</span> 返回复刻站主页';
+  btn.setAttribute('title','返回复刻站主页');
+  document.body?document.body.appendChild(btn):document.addEventListener('DOMContentLoaded',function(){document.body.appendChild(btn)});
+  var mask=document.createElement('div'); mask.id='lsgz-mask';
+  mask.innerHTML='<div id="lsgz-box"><h4>\u8fd9\u4e2a\u94fe\u63a5\u6307\u5411\u7ad9\u5916</h4>'
+   +'<p>\u5b83\u5c5e\u4e8e\u5f53\u5e74\u7f51\u7ad9\u7684\u5916\u90e8\u94fe\u63a5\uff08\u5176\u4ed6\u5b66\u6821\u3001\u6559\u80b2\u5c40\u3001\u65b0\u95fb\u7f51\u7ad9\u7b49\uff09\u3002'
+   +'\u672c\u7ad9\u53ea\u8fd8\u539f\u4e86\u6df7\u6c34\u9ad8\u7ea7\u4e2d\u5b66\u81ea\u5df1\u7684\u9875\u9762\uff0c<b>\u8fd9\u4e2a\u76ee\u6807\u9875\u9768\u672a\u8fd8\u539f</b>\u3002</p>'
+   +'<div id="lsgz-url"></div>'
+   +'<div class="row"><button class="go">\u4ecd\u7136\u6253\u5f00\uff08\u65b0\u7a97\u53e3\uff09</button>'
+   +'<button class="no">\u53d6\u6d88</button></div></div>';
+  document.body?document.body.appendChild(mask):document.addEventListener('DOMContentLoaded',function(){document.body.appendChild(mask)});
+  var urlEl=mask.querySelector('#lsgz-url');
+  function isInternal(h){for(var i=0;i<INTERNAL.length;i++){if(h.indexOf(INTERNAL[i])>=0)return true}return false}
+  function open(u){urlEl.textContent=u;mask.classList.add('on')}
+  function close(){mask.classList.remove('on')}
+  mask.querySelector('.no').onclick=close;
+  mask.addEventListener('click',function(e){if(e.target===mask)close()});
+  mask.querySelector('.go').onclick=function(){
+    var u=urlEl.getAttribute('data-u'); close();
+    if(u) window.open(u,'_blank','noopener');
+  };
+  document.addEventListener('click',function(e){
+    var a=e.target; while(a&&a.tagName!=='A'){a=a.parentElement}
+    if(!a) return;
+    var h=a.getAttribute('href'); if(!h) return;
+    if(/^(javascript:|#|mailto:|tel:|data:)/i.test(h)) return;
+    var abs; try{ abs=new URL(h,location.href) }catch(err){ return }
+    if(abs.protocol!=='http:'&&abs.protocol!=='https:') return;
+    if(abs.host===location.host) return;              // 同源，正常跳转
+    if(isInternal(abs.host)) return;                  // 本站已还原域名
+    e.preventDefault(); urlEl.setAttribute('data-u',abs.href); open(abs.href);
+  },true);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') close() });
+})();
+</script></body>
+
+</html>
+<script>  
+var tourl="/man/";
+$("#usr").focus();
+
+$(function () {
+    
+    var bid="";
+	var APP_STATE="1";
+	var APP_URL="http://sso.njlsedu.cn/api/jsonp/";
+	if(APP_STATE=='1'){
+	    $("#tl_url").show();
+		if(bid==''){
+			$.getJSON(APP_URL+"/?callback=?",function (data){
+				if (data["ret"] == '1') {
+				  $.post("./srv/plg_tl.php?t=ologin", data, function (d, e) {
+					   if (d.indexOf("err:2") > -1) {
+						   //location.reload();
+						   alert("您没有统一登录权限！");
+						   return false;
+					   }
+					   if (d.indexOf("ok") > -1) {
+						   //location.reload();
+						   dosome(1,data.id);
+						   return false;
+					   }
+					   if(d.indexOf("layer")>-1){
+
+						   layer.open({
+							  type: 1,
+							  title: '统一登录',
+							  shadeClose: true,
+							  shade: 0.8,
+							  area: ['320px', '320px'],
+							  content: $("#ologin")
+							}); 
+							$("#btn_band").click(function(){
+								//alert('asd');
+								$("#usr").val($("#usr_b").val());
+								$("#pwd").val($("#pwd_b").val());
+								//alert($("#usr").val());alert($("#usr").val());
+								dosome(0,data.id);
+							})
+							$("#btn_create").click(function(){
+								if($("#usr_c").val()==""){layer.msg("帐号不能为空");return false;}
+								var patrn=/^([a-zA-Z0-9_]){3,25}$/; 
+								if(!patrn.test($("#usr_c").val())){layer.msg("用户名由3-25位字母、数字、下划线组成");return false;}
+								if($("#pwd_c").val()==""){layer.msg("密码不能为空");return false;} 
+								if($("#pwd_c").val()!=$("#pwd2_c").val()){layer.msg("密码不一致");return false;}
+								$("#usr").val($("#usr_c").val());
+								$("#pwd").val($("#pwd_c").val());
+								dosome(2,data.id);							
+							})
+							return false;
+					   }
+				   });          
+				}
+			
+			})
+		}
+    }
+    $("#btn").bind("click",function(){dosome(0)});
+ });  
+function dosome(ologin,bid){
+	if(ologin=='0'){
+		if($("#usr").val()==""){layer.msg("帐号不能为空");return false;}
+		if($("#pwd").val()==""){layer.msg("密码不能为空");return false;} 
+	}   
+   
+    $.post("./srv/plg.php?", { u: $("#usr").val(), p: $("#pwd").val(),s:($("#sav").is(":checked")?"1" :"0"),'bid':bid,'ologin':ologin }, function (d, e) {
+      d1=JSON.parse(d);
+       if (d1.ret=="ok") {             
+          if(tourl==""){        
+			top.location.href = "/man";
+          }
+          else
+			top.location.href = "/man";
+           //location.href = tourl;
+        }
+        else if(d1.ret=="err"){
+           layer.msg(d1.msg);
+        }
+        else{
+            layer.msg(d);
+        }      
+    });
+}
+$(".nav-tabs li").each(function(){
+	$(this).click(function(){
+		$(this).addClass("active");
+		$(this).siblings().removeClass("active");
+		$("#"+$(this).attr("did")).show();
+		$("#"+$(this).attr("did")).siblings().hide();
+	})
+})
+
+
+</script>

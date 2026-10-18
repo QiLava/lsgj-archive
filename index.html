@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>江苏省溧水高级中学 · 官网时光机</title>
+<style>
+  :root{
+    --win-bg:#c0c0c0; --win-face:#d4d0c8; --title-a:#0a246a; --title-b:#3a6ea5;
+    --link:#0000ee; --link-v:#551a8b; --ink:#1a1a1a; --muted:#5a5a5a;
+    --accent:#c00; --ok:#0a7d2c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    font-family:Tahoma,Verdana,"宋体","Microsoft YaHei",sans-serif;
+    background:#008080;
+    background-image:
+      linear-gradient(rgba(0,0,0,.06),rgba(0,0,0,.06)),
+      repeating-linear-gradient(45deg,rgba(255,255,255,.03) 0 2px,transparent 2px 4px);
+    color:var(--ink); line-height:1.7; padding:20px 14px 60px; min-height:100vh;
+  }
+  .wrap{max-width:960px;margin:0 auto}
+
+  /* ── 窗口外壳 ── */
+  .win{background:var(--win-bg);border:2px outset #fff;
+       box-shadow:4px 4px 0 rgba(0,0,0,.35);margin-bottom:18px}
+  .win-title{background:linear-gradient(180deg,var(--title-a),var(--title-b));
+       color:#fff;padding:7px 12px;font-weight:700;font-size:14px;
+       display:flex;align-items:center;gap:8px;letter-spacing:.5px}
+  .win-title .dots{margin-left:auto;display:flex;gap:4px}
+  .win-title .dots i{width:15px;height:14px;background:var(--win-bg);
+       border:1px outset #fff;display:block}
+  .win-body{padding:18px 20px}
+
+  /* ── 页头 ── */
+  .hero{text-align:center;padding:26px 16px 22px}
+  .hero .kicker{font-size:12px;color:#ffff80;letter-spacing:3px;
+       background:#000080;display:inline-block;padding:3px 12px;margin-bottom:14px}
+  .hero h1{font-size:30px;color:#fff;letter-spacing:2px;line-height:1.35;
+       text-shadow:2px 2px 0 #000,4px 4px 0 rgba(0,0,0,.4)}
+  .hero .en{font-size:12px;color:#bfe3ff;margin-top:8px;letter-spacing:1px}
+  .hero .sub{margin-top:16px;font-size:13px;color:#fff;
+       background:rgba(0,0,0,.35);display:inline-block;padding:6px 16px;border-radius:3px}
+
+  /* ── 跑马灯公告 ── */
+  .marquee{background:#ffffcc;border:2px inset #fff;padding:7px 12px;
+       font-size:13px;color:#8b0000;overflow:hidden;white-space:nowrap;
+       text-overflow:ellipsis;margin-bottom:18px}
+  .marquee b{color:#000080}
+
+  /* ── 站点卡片 ── */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .card{background:var(--win-face);border:2px outset #fff;padding:0;
+        display:flex;flex-direction:column;transition:transform .15s}
+  .card:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 rgba(0,0,0,.3)}
+  .card-h{background:linear-gradient(180deg,#e8e4dc,#c8c4bc);
+        border-bottom:2px solid #a8a4a0;padding:8px 12px;font-size:13px;font-weight:700;
+        display:flex;align-items:center;gap:7px}
+  .card-h .num{background:#000080;color:#fff;width:20px;height:20px;flex:none;
+        display:grid;place-items:center;font-size:11px;border-radius:2px}
+  .card-b{padding:14px;flex:1;display:flex;flex-direction:column}
+  .card-b h3{font-size:16px;color:#000080;margin-bottom:4px}
+  .card-b h3 a{color:var(--link)}
+  .card-b .era{font-size:11.5px;color:var(--muted);margin-bottom:8px}
+  .card-b p{font-size:12.5px;color:#333;margin-bottom:10px;flex:1}
+  .stats{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+  .st{background:#fff;border:1px solid #a8a4a0;padding:2px 8px;font-size:11px;color:#444}
+  .st b{color:#000080;font-size:12.5px}
+  .btn{align-self:flex-start;background:var(--win-bg);border:2px outset #fff;
+       padding:6px 18px;font-size:13px;font-weight:700;color:#000;cursor:pointer;
+       text-decoration:none;font-family:inherit}
+  .btn:active{border-style:inset}
+  .btn:hover{background:#d8d4cc}
+
+  /* ── 说明区 ── */
+  .note{background:#fffbe6;border:2px inset #fff;padding:16px 18px;font-size:13px;color:#5a4a1a}
+  .note h4{font-size:14px;color:#8b0000;margin-bottom:8px}
+  .note ul{padding-left:20px}
+  .note li{margin-bottom:5px}
+  .note .lk{color:var(--link);text-decoration:underline;cursor:pointer}
+
+  /* ── 页脚 ── */
+  .foot{text-align:center;font-size:11.5px;color:#cfe8e8;margin-top:22px;line-height:2}
+  .foot .lk{color:#fff;text-decoration:underline;cursor:pointer}
+  .counter{display:inline-block;background:#000;color:#0f0;
+       font-family:"Courier New",monospace;padding:2px 10px;letter-spacing:3px;
+       border:1px inset #888;margin-top:6px}
+
+  /* ── 免责声明弹窗 ── */
+  .mask{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:99999;
+        display:none;align-items:center;justify-content:center;padding:16px}
+  .mask.on{display:flex}
+  .dlg{background:var(--win-bg);border:2px outset #fff;max-width:520px;width:100%;
+       box-shadow:6px 6px 0 rgba(0,0,0,.4)}
+  .dlg-h{background:linear-gradient(180deg,var(--title-a),var(--title-b));color:#fff;
+       padding:8px 12px;font-size:13px;font-weight:700;display:flex;gap:8px;align-items:center}
+  .dlg-b{padding:20px;font-size:13.5px;color:#222;max-height:70vh;overflow:auto}
+  .dlg-b p{margin-bottom:10px}
+  .dlg-b .warn{background:#fff;border:2px inset #fff;padding:12px;margin:12px 0;color:#8b0000}
+  .dlg-f{padding:14px 20px;border-top:2px solid #a8a4a0;display:flex;gap:10px;justify-content:flex-end}
+
+  /* ── 手机适配 ── */
+  @media (max-width:720px){
+    body{padding:12px 8px 40px}
+    .grid{grid-template-columns:1fr}
+    .hero h1{font-size:22px;letter-spacing:1px}
+    .hero .kicker{font-size:10px;letter-spacing:2px}
+    .win-body{padding:14px}
+    .card-b h3{font-size:15px}
+    .marquee{font-size:12px}
+  }
+  @media (max-width:400px){
+    .hero h1{font-size:19px}
+    .st{font-size:10px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 页头 -->
+  <div class="win">
+    <div class="win-title"><span>🏫</span> C:\省溧中\官网时光机.exe
+      <span class="dots"><i></i><i></i><i></i></span></div>
+    <div class="win-body hero">
+      <div class="kicker">★ 校 友 专 属 · 时 光 回 到 2 0 0 3 ★</div>
+      <h1>江苏省溧水高级中学</h1>
+      <div class="en">LISHUI SENIOR HIGH SCHOOL OF JIANGSU PROVINCE</div>
+      <div class="sub">这里收藏着学校官网 2003 — 2021 年的全部可寻回页面</div>
+    </div>
+  </div>
+
+  <!-- 公告 -->
+  <div class="marquee">
+    📢 <b>欢迎回到省溧中老官网！</b>本站由校友从互联网档案馆抢救性还原 ·
+    共 <b>2191</b> 个页面 · 点击下方任意站点即可进入，页面右下角可随时返回本页
+  </div>
+
+  <!-- 站点列表 -->
+  <div class="win">
+    <div class="win-title"><span>📁</span> 请选择要访问的存档站点
+      <span class="dots"><i></i><i></i><i></i></span></div>
+    <div class="win-body">
+      <div class="grid">
+
+        <div class="card">
+          <div class="card-h"><span class="num">1</span> 学校主站</div>
+          <div class="card-b">
+            <h3><a href="site_old/index.html">lsgjzx.cn</a></h3>
+            <div class="era">约 2010 — 2017 · PHP168 齐博 CMS</div>
+            <p>学校独立域名时期的官方网站。完整导航含学校概况、历任领导、知名校友、光辉历程、校长风采、中层领导、新闻中心、教学教研、招考专栏、教师频道、学生园地、德育天地。</p>
+            <div class="stats">
+              <span class="st"><b>587</b> 页面</span>
+              <span class="st"><b>695</b> 图片</span>
+              <span class="st"><b>39</b> MB</span>
+            </div>
+            <a class="btn" href="site_old/index.html">进 入 →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-h"><span class="num">2</span> 化学生物课程基地</div>
+          <div class="card-b">
+            <h3><a href="site_old/course_base_2016.html">lsgjzx.cn / 课程基地</a></h3>
+            <div class="era">2016 年 · 曾占用根域名</div>
+            <p>「江苏省基于乡土资源化学生物课程基地」与「南京市化学生物融合工作室」。副校长、化学特级教师陈龙文主持，含各位特级教师介绍与基地剪影。</p>
+            <div class="stats">
+              <span class="st"><b>1</b> 首页</span>
+              <span class="st">副校长/特级教师介绍</span>
+            </div>
+            <a class="btn" href="site_old/course_base_2016.html">进 入 →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-h"><span class="num">3</span> 视频点播系统</div>
+          <div class="card-b">
+            <h3><a href="site_vod/html.html">vod.lsgjzx.cn</a></h3>
+            <div class="era">约 2016 — 2018</div>
+            <p>「溧水县中视频系统」，学校自己的视频点播平台。恢复了首页与 33 张视频缩略图，当年的视频文件本身未被存档。</p>
+            <div class="stats">
+              <span class="st"><b>1</b> 首页</span>
+              <span class="st"><b>33</b> 缩略图</span>
+            </div>
+            <a class="btn" href="site_vod/html.html">进 入 →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-h"><span class="num">4</span> 后期官网</div>
+          <div class="card-b">
+            <h3><a href="site_new/index.html">lsgj.njlsedu.cn</a></h3>
+            <div class="era">约 2018 — 2021 · 区教育信息网子站</div>
+            <p>学校迁入区教育信息网后的官网。这一版内容量最大，也是很多校友最熟悉的界面。</p>
+            <div class="stats">
+              <span class="st"><b>143</b> 页面</span>
+              <span class="st"><b>483</b> 图片</span>
+              <span class="st"><b>6.7</b> MB</span>
+            </div>
+            <a class="btn" href="site_new/index.html">进 入 →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-h"><span class="num">5</span> 区教育网 · 学校相关</div>
+          <div class="card-b">
+            <h3><a href="site_njls/index.html">www.njlsedu.cn</a></h3>
+            <div class="era">区教育局网站中涉及省溧中的文章</div>
+            <p>从区教育信息网 <b>1125</b> 篇存档文章中，筛出正文提及「省溧中 / 溧水高级中学」的 <b>73</b> 篇——招生、招聘、表彰、教研通知。其余文章也可一并翻阅。</p>
+            <div class="stats">
+              <span class="st"><b id="njls-n">…</b> 篇文章</span>
+            </div>
+            <a class="btn" href="site_njls/index.html">进 入 →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-h"><span class="num">6</span> 区教研室 · 教研文章</div>
+          <div class="card-b">
+            <h3><a href="site_lsjyj/index.html">lsjyj.njlsedu.cn</a></h3>
+            <div class="era">约 2019 — 2023 · 区教学研究室网站</div>
+            <p>全区教研活动、教师培训、教学竞赛通报。326 篇存档中有 16 篇正文提及省溧中
+               —— 教师获奖、教研组长会议、赛课评比等。</p>
+            <div class="stats">
+              <span class="st"><b>16</b> 篇提及学校</span>
+              <span class="st"><b>326</b> 篇总计</span>
+            </div>
+            <a class="btn" href="site_lsjyj/index.html">进 入 →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-h"><span class="num">7</span> 学生子站</div>
+          <div class="card-b">
+            <h3 style="color:#8b0000">students.lsgjzx.cn</h3>
+            <div class="era">约 2016 · 无实质内容留存</div>
+            <p>学生门户。互联网档案馆仅存 5 条记录，唯一首页快照抓到的是网络设备错误页，未能还原出任何内容。</p>
+            <div class="stats">
+              <span class="st"><b>0</b> 可还原页面</span>
+              <span class="st">仅存 9 张模板图</span>
+            </div>
+            <a class="btn" href="site_students/index.html">查 看 说 明 →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 说明 -->
+  <div class="win">
+    <div class="win-title"><span>ℹ️</span> 参观前请读一下
+      <span class="dots"><i></i><i></i><i></i></span></div>
+    <div class="win-body">
+      <div class="note">
+        <h4>⚠ 三件需要知道的事</h4>
+        <ul>
+          <li><b>这是「还原」，不是学校官方运营的网站。</b>所有页面来自互联网档案馆
+              （Wayback Machine）的历史快照，由校友整理而成，与学校本身无关。
+              <span class="lk" onclick="showDisclaimer()">查看完整声明</span></li>
+          <li><b>存档是抽样，不是全站。</b>档案馆当年只爬了部分页面，
+              缺失的文章和图片无法找回。缺失的图片会显示为灰色占位框并标注「图片未存档」。</li>
+          <li><b>外链不会直接跳转。</b>老页面里指向其他学校、教育局、新闻网站的链接，
+              点击后会弹出提示说明它指向哪里——那些页面本站没有还原。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    江苏省溧水高级中学官网存档还原 · 数据源 Internet Archive Wayback Machine<br>
+    还原时间 2026 年 10 月 · 仅供校友怀旧参观 · <span class="lk" onclick="showDisclaimer()">免责声明</span>
+    <br><span class="counter" id="ctr">000000</span>
+  </div>
+</div>
+
+<!-- 免责声明 -->
+<div class="mask" id="mask">
+  <div class="dlg">
+    <div class="dlg-h"><span>⚠️</span> 免责声明</div>
+    <div class="dlg-b">
+      <p><b>欢迎来到江苏省溧水高级中学官网时光机。</b></p>
+      <p>本站是一个<b>非官方的历史存档还原项目</b>。站内所有页面均来自
+         <b>互联网档案馆（Internet Archive / Wayback Machine）</b>对学校历年官网的公开快照，
+         由校友整理、转换、链接本地化后发布。</p>
+      <div class="warn">
+        <b>因此：</b><br>
+        ① 本站<b>不是</b>江苏省溧水高级中学的官方网站，与学校无任何关联；<br>
+        ② 站内信息为历史快照，<b>不代表学校现状</b>，请勿作为任何依据；<br>
+        ③ 页面中的职务、名单、数据等均为当年内容，可能已变动；<br>
+        ④ 若本站内容涉及权益问题，请联系我们，将及时处理。
+      </div>
+      <p>我们只是想把当年那个网站找回来，给校友们一个回去看看的地方。</p>
+    </div>
+    <div class="dlg-f">
+      <button class="btn" onclick="acceptDisclaimer()">我知道了，进去看看</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var KEY='lsgz_disclaimer_seen';
+  var mask=document.getElementById('mask');
+  window.showDisclaimer=function(){mask.classList.add('on')};
+  window.acceptDisclaimer=function(){
+    try{localStorage.setItem(KEY,'1')}catch(e){}
+    mask.classList.remove('on');
+  };
+  // 首次打开才弹
+  var seen=null; try{seen=localStorage.getItem(KEY)}catch(e){}
+  if(!seen) mask.classList.add('on');
+
+  // 统计区教育网文章数
+  fetch('site_njls/articles.json').then(function(r){return r.json()}).then(function(d){
+    var el=document.getElementById('njls-n');
+    if(el&&d&&d.n) el.textContent=d.n;
+  }).catch(function(){});
+
+  // 装饰性计数器
+  var c=document.getElementById('ctr');
+  if(c){var n=2191;c.textContent=String(n).padStart(6,'0');}
+})();
+</script>
+</body>
+</html>
