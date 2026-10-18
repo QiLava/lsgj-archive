@@ -9,6 +9,14 @@ Wayback Machine）抢救出来，整理成一个可以点着逛的怀旧站，�
 - 还原完成：2026 年 10 月 18 日
 - 规模：**7 个站点 / 2191 个 HTML 页面 / 111 MB**
 
+## 🌐 在线访问
+
+| 地址 | 说明 |
+|---|---|
+| **https://bak.slz.ink** | 正式入口（Cloudflare Pages + 自定义域） |
+| https://lsgj-archive.pages.dev | Cloudflare Pages 默认域名 |
+| 本仓库 | 全部源码与还原脚本 |
+
 ---
 
 ## 目录
